@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+.header {
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px 10px 0px 0px;
+  }
+  
+  .logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .nav_list {
+    font-family: 'Gantari', sans-serif;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .nav_list li {
+    cursor: pointer;
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .nav_list li:hover {
+    color: #007BFF; /* Change to your desired hover color */
+    transform: scale(1.1);
+  }
+  
+  .hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .nav_list {
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 250px;
+      background-color: #333333; /* Set background color to a modern dark shade */
+      padding-top: 60px;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      transform: translateX(-100%);
+      transition: transform 0.5s ease; /* Smooth transition */
+      color: white; /* Set text color to white for better contrast */
+    }
+  
+    .nav_list.open {
+      display: flex; /* Ensure display is flex when open */
+      transform: translateX(0);
+    }
+  
+    .nav_list li {
+      color: white; /* Ensure list items are white */
+      font-size: 24px; /* Increase font size for modern look */
+      padding: 15px 20px; /* Add padding for better spacing */
+      border-bottom: 1px solid #444444; /* Add a subtle border between items */
+    }
+  
+    .nav_list li:last-child {
+      border-bottom: none; /* Remove border from the last item */
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  }
+  
