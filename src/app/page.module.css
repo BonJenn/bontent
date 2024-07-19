@@ -158,3 +158,15 @@
   transform: scale(1.05);
 }
 
+@media (max-width: 1000px) {
+  .hero_1 {
+    font-size: 30px;
+  }
+
+  .clients_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
