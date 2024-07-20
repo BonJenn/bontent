@@ -40,7 +40,7 @@ export default function Home() {
         {!showServices && (
           <>
             <div className={styles.hero_1}>
-              <h1> <span style={{ color: 'gray' }}>BONTENT</span> is a brand strategy <span style={{ color: 'gray' }}>&</span> digital solutions agency.</h1>
+              <h1> <span style={{ color: 'gray' }}>BONTENT</span> is a brand strategy <span style={{ color: 'gray' }}>&amp;</span> digital solutions agency.</h1>
             </div>
 
             <div className={styles.hero_2}>
