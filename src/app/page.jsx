@@ -1,4 +1,8 @@
-import Image from 'next/image';
+import { useState, useRef, useEffect } from "react";
+import styles from "./page.module.css";
+import Header from "../components/header";
+import Footer from "../components/footer";
+import Services from "../components/services";
 
 export default function Home() {
   const [openIndex, setOpenIndex] = useState(null);
