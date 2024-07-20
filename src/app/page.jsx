@@ -1,10 +1,4 @@
-"use client";
-
-import { useState, useRef, useEffect } from "react";
-import styles from "./page.module.css";
-import Header from "../components/header";
-import Footer from "../components/footer";
-import Services from "../components/services";
+import Image from 'next/image';
 
 export default function Home() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -83,9 +77,9 @@ export default function Home() {
               <div className={styles.clients}>
                 <h2>Clients</h2>
                 <div className={styles.clients_list}>
-                  <img className={styles.client_RAP} src="/images/RAP_logo.png" alt="RAP" />
-                  <img className={styles.vistaview} src="/images/vistaview_logo.png" alt="Vistaview" />
-                  <img className={styles.bitcoin_brainiac} src="/images/bitcoin_brainiac_logo.png" alt="Bitcoin Brainiac" />
+                  <Image className={styles.client_RAP} src="/images/RAP_logo.png" alt="RAP" width={150} height={150} />
+                  <Image className={styles.vistaview} src="/images/vistaview_logo.png" alt="Vistaview" width={300} height={150} />
+                  <Image className={styles.bitcoin_brainiac} src="/images/bitcoin_brainiac_logo.png" alt="Bitcoin Brainiac" width={300} height={150} />
                 </div>
               </div>
             </div>
