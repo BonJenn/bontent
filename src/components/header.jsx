@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import styles from "../styles/header.module.css";
 
-export default function Header() {
+export default function Header({ onServicesClick }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -19,7 +19,7 @@ export default function Header() {
       <ul className={`${styles.nav_list} ${menuOpen ? styles.open : ""}`}>
         <li>Work</li>
         <li>Clients</li>
-        <li>Services</li>
+        <li onClick={onServicesClick}>Services</li>
         <li>About</li>
         <li>Blog</li>
         <li>Contact</li>
@@ -27,4 +27,3 @@ export default function Header() {
     </header>
   );
 }
-
