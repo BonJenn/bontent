@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import styles from "./page.module.css";
 import Header from "../components/header";
+import Footer from "../components/footer";
 
 export default function Home() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -37,7 +38,7 @@ export default function Home() {
       <Header />
       <main className={styles.main}>
         <div className={styles.hero_1}>
-          <h1>BONTENT is a global brand strategy & digital solutions agency</h1>
+          <h1> <span style={{ color: 'dark gray' }}>BONTENT</span> is a global brand strategy <span style={{ color: 'dark gray' }}>&</span> digital solutions agency</h1>
         </div>
 
         <div className={styles.hero_2}>
@@ -83,6 +84,8 @@ export default function Home() {
         <div className={styles.hero_5}>
           <p>Products go Here</p>
         </div>
+
+        <Footer />
       </main>
     </>
   );
