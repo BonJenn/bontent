@@ -1,4 +1,4 @@
-"use client";
+"use client"; // Add this line at the top
 
 import { useState, useRef, useEffect } from "react";
 import Image from 'next/image';
@@ -29,7 +29,7 @@ export default function Home() {
   };
 
   const items = [
-    { title: "Branding", content: "Your brand is your story, and we help you tell it compellingly. Our branding services craft a unique identity for your business, blending strategic insights with creative design to build a brand that resonates with your audience and stands out in the market." },
+    { title: "Branding", content: "Our approach centers on the belief that brand and user experience (UX) are fundamentally interconnected. We specialize in developing and presenting cohesive digital brand identities across multiple channels. Our team provides strategic support and detailed guidelines to maintain brand uniformity." },
     { title: "Web Development", content: "Transform your online presence with our expert web development services. We build responsive, user-friendly websites that not only look great but also provide a seamless experience for your visitors, enhancing engagement and driving conversions." },
     { title: "Software Development", content: "Turn your ideas into reality with our custom software development services. From concept to deployment, we create powerful, scalable software solutions tailored to meet your specific business needs, leveraging the latest technologies to deliver exceptional performance." },
   ];
@@ -41,10 +41,35 @@ export default function Home() {
         {!showServices && (
           <>
             <div className={styles.hero_1}>
-              <h1> <span style={{ color: 'gray' }}>BONTENT</span> is a brand strategy <span style={{ color: 'gray' }}>&amp;</span> digital solutions agency.</h1>
+                <div className={styles.videoContainer}>
+                    <video 
+                        className={styles.video} 
+                        autoPlay 
+                        loop 
+                        muted 
+                    >
+                        <source src="/images/bontent_animation.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <h1 className={styles.heroText}>
+                    <span style={{ color: 'gray' }}>BONTENT</span> is a brand strategy <span style={{ color: 'gray' }}>&amp;</span> digital solutions agency.
+                </h1>
             </div>
 
             <div className={styles.hero_2}>
+              <div className={styles.videoContainer}>
+                <video 
+                  className={styles.video} 
+                  autoPlay 
+                  loop 
+                  muted 
+                  style={{ borderRadius: '8px' }}
+                >
+                  <source src="/images/different_video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
               <h1>
                 <span style={{ fontWeight: '100' }}>Enhancing</span>
                 <span style={{ fontWeight: 'bold' }}> brand presence</span>

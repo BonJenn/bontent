@@ -1,10 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 /* General styles */
 .body {
   background-color: var(--background-color);
   color: var(--text-color);
-  font-family: 'Space Grotesk', sans-serif; /* Directly set the font-family */
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .title {
@@ -14,7 +12,7 @@
   font-weight: bold;
   font-size: 1.5em;
   margin-bottom: 10px;
-  cursor: pointer; /* Add cursor pointer */
+  cursor: pointer;
 }
 
 .arrow {
@@ -30,16 +28,14 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease-out, padding 0.5s ease-out;
-  padding: 0 20px; /* Adjust padding for animation */
+  padding: 0 20px;
 }
 
 /* ... Hero 1 ... */
-
 .hero_1 {
   font-family: 'PT Serif', serif;
   border-radius: 0px 0px 10px 10px;
   font-size: 45px;
-  background-color: #efedda;
   color: rgba(160, 107, 107, 0.785);
   display: flex;
   flex-direction: column;
@@ -49,12 +45,49 @@
   padding: 40px;
   box-sizing: border-box;
   overflow: hidden;
-  height: 600px;
+  height: 100vh; /* Ensure the hero section covers the full viewport height */
   width: 100%;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.videoContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.videoContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  z-index: 1;
+  pointer-events: none;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.heroText {
+  z-index: 2;
+  font-size: 2em;
+  padding: 20px;
 }
 
 /* ... Hero 2 ... */
-
 .hero_2 {
   font-family: 'Gantari', sans-serif;
   color: rgba(160, 107, 107, 0.785);
@@ -70,8 +103,18 @@
   overflow: hidden;
 }
 
-/* ... Hero 3 ... */
+.videoContainer {
+  border-radius: 10px;
+  overflow: hidden;
+}
 
+.videoContainer video {
+  width: 100%;
+  height: auto;
+  border-radius: inherit;
+}
+
+/* ... Hero 3 ... */
 .hero_3 {
   font-family: 'Gantari', sans-serif;
   border-radius: 10px;
@@ -106,16 +149,14 @@
   overflow: hidden;
   width: 100%;
   box-sizing: border-box;
- 
 }
 
 .listItem.open .content {
-  max-height: 1000px; /* Set an appropriate max-height */
-  padding: 10px 20px; /* Add padding for animation */
+  max-height: 1000px;
+  padding: 10px 20px;
 }
 
 /* ... Hero 4 ... */
-
 .hero_4 {
   font-family: 'Gantari', sans-serif;
   font-size: 40px;
@@ -124,7 +165,6 @@
   justify-content: center;
   align-items: center;
   color: rgba(160, 107, 107, 0.785);
-  
 }
 
 .clients {
