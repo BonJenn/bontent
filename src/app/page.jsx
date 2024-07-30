@@ -1,4 +1,4 @@
-"use client"; // Add this line at the top
+'use client';
 
 import { useState, useRef, useEffect } from "react";
 import Image from 'next/image';
@@ -10,7 +10,7 @@ import Services from "../components/services";
 export default function Home() {
   const [openIndex, setOpenIndex] = useState(null);
   const contentRefs = useRef([]);
-  const [showServices, setShowServices] = useState(false);
+  const [showServices, setShowServices] = useState(false); // Declare showServices state variable
 
   useEffect(() => {
     contentRefs.current.forEach((content, index) => {
@@ -39,23 +39,26 @@ export default function Home() {
       <Header onServicesClick={() => setShowServices(true)} />
       <main className={styles.main}>
         {!showServices && (
+          // Rest of your code...
           <>
             <div className={styles.hero_1}>
-                <div className={styles.videoContainer}>
-                    <video 
-                        className={styles.video} 
-                        autoPlay 
-                        loop 
-                        muted 
-                    >
-                        <source src="/images/bontent_animation.mp4" type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <h1 className={styles.heroText}>
-                    <span style={{ color: 'gray' }}>BONTENT</span> is a brand strategy <span style={{ color: 'gray' }}>&amp;</span> digital solutions agency.
-                </h1>
+              <div className={`${styles.videoContainer} ${styles.overlayContainer}`}>
+                <video 
+                  className={styles.video} 
+                  autoPlay 
+                  loop 
+                  muted 
+                >
+                  <source src="/images/bontent_animation.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <h1 className={styles.heroText}>
+                <span style={{ color: 'white' }}>BONTENT</span> is a brand strategy <span style={{ color: 'white' }}>&amp;</span> digital solutions agency.
+              </h1>
             </div>
+
+            {/* Rest of your code... */}
 
             <div className={styles.hero_2}>
               <div className={styles.videoContainer}>

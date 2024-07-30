@@ -45,7 +45,6 @@
   padding: 40px;
   box-sizing: border-box;
   overflow: hidden;
-  height: 100vh; /* Ensure the hero section covers the full viewport height */
   width: 100%;
   position: relative;
   text-align: center;
@@ -62,7 +61,7 @@
   z-index: -1;
 }
 
-.videoContainer::before {
+.overlayContainer::before {
   content: "";
   position: absolute;
   top: 0;
@@ -82,11 +81,11 @@
 }
 
 .heroText {
+  position: relative; /* Add this line */
   z-index: 2;
   font-size: 2em;
   padding: 20px;
 }
-
 /* ... Hero 2 ... */
 .hero_2 {
   font-family: 'Gantari', sans-serif;
