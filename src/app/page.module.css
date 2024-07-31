@@ -81,11 +81,12 @@
 }
 
 .heroText {
-  position: relative; /* Add this line */
+  position: relative;
   z-index: 2;
   font-size: 2em;
   padding: 20px;
 }
+
 /* ... Hero 2 ... */
 .hero_2 {
   font-family: 'Gantari', sans-serif;
@@ -100,17 +101,34 @@
   padding: 20px;
   box-sizing: border-box;
   overflow: hidden;
+  position: relative;
 }
 
-.videoContainer {
-  border-radius: 10px;
-  overflow: hidden;
+.enhancedText {
+  position: relative;
+  z-index: 2;
+  font-size: 2em;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.videoContainer video {
-  width: 100%;
-  height: auto;
-  border-radius: inherit;
+.highlight {
+  background: linear-gradient(45deg, rgba(160, 107, 107, 0.785), #efedda, #007BFF, rgba(160, 107, 107, 0.785));
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientAnimation 5s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* ... Hero 3 ... */

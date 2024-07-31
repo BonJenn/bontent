@@ -1,4 +1,4 @@
-'use client';
+'use client'
 
 import { useState, useRef, useEffect } from "react";
 import Image from 'next/image';
@@ -10,7 +10,7 @@ import Services from "../components/services";
 export default function Home() {
   const [openIndex, setOpenIndex] = useState(null);
   const contentRefs = useRef([]);
-  const [showServices, setShowServices] = useState(false); // Declare showServices state variable
+  const [showServices, setShowServices] = useState(false);
 
   useEffect(() => {
     contentRefs.current.forEach((content, index) => {
@@ -39,7 +39,6 @@ export default function Home() {
       <Header onServicesClick={() => setShowServices(true)} />
       <main className={styles.main}>
         {!showServices && (
-          // Rest of your code...
           <>
             <div className={styles.hero_1}>
               <div className={`${styles.videoContainer} ${styles.overlayContainer}`}>
@@ -58,28 +57,14 @@ export default function Home() {
               </h1>
             </div>
 
-            {/* Rest of your code... */}
-
             <div className={styles.hero_2}>
-              <div className={styles.videoContainer}>
-                <video 
-                  className={styles.video} 
-                  autoPlay 
-                  loop 
-                  muted 
-                  style={{ borderRadius: '8px' }}
-                >
-                  <source src="/images/different_video.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h1>
-                <span style={{ fontWeight: '100' }}>Enhancing</span>
-                <span style={{ fontWeight: 'bold' }}> brand presence</span>
-                <span style={{ fontWeight: '100' }}> through</span>
-                <span style={{ fontStyle: 'italic' }}>artistic design</span>
-                <span style={{ fontWeight: '100' }}> and</span>
-                <span style={{ fontWeight: 'bold' }}> digital products</span>.
+              <h1 className={styles.enhancedText}>
+                <span style={{ fontWeight: '100' }}>Enhancing&nbsp;</span>
+                <span className={styles.highlight}> brand presence </span>
+                <span style={{ fontWeight: '100' }}> through&nbsp;</span>
+                <span className={styles.highlight}> artistic design&nbsp;</span>
+                <span style={{ fontWeight: '100' }}> and </span>
+                <span className={styles.highlight}> digital products</span>.
               </h1>
             </div>
 
