@@ -8,6 +8,16 @@
   background-color: var(--background-color);
   color: var(--text-color);
   font-family: 'Roboto', sans-serif;
+
+}
+
+.servicesContainer h2 {
+  font-size: 4em;
+  font-weight: 900;
+  margin-bottom: 30px;
+  text-align: left;
+  color: rgba(160, 107, 107, 0.785);
+  font-family: 'Gantari', sans-serif;
 }
 
 .serviceItem {
@@ -21,11 +31,21 @@
   border-radius: var(--border-radius);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 20px;
 }
 
 .serviceItem:hover {
   transform: scale(1.02);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.serviceTitle {
+  font-size: 4.5em; /* Increase the font size */
+  font-weight: 900; /* Make it bolder */
+  margin-bottom: 30px; /* Increase the margin for better spacing */
+  text-align: left; /* Align to the left */
+  color: rgba(160, 107, 107, 0.785); /* Use the color scheme from the rest of the site */
+  font-family: 'Gantari', sans-serif; /* Use a modern font */
 }
 
 .serviceContent {
@@ -37,13 +57,6 @@
     line-height: 1.6;
 }
 
-.serviceTitle {
-  font-size: 1.8em;
-  font-weight: bold;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
 .textContent {
     flex: 1;
 }
@@ -52,6 +65,6 @@
     width: 100%;
     height: auto;
     max-width: 400px;
-    max-height: 400px;
+    max-height: 600px; /* Increase the max-height to make it taller */
     margin-left: 20px;
 }

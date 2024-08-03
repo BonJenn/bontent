@@ -18,7 +18,6 @@ export default function Header({ onServicesClick }) {
       </div>
       <ul className={`${styles.nav_list} ${menuOpen ? styles.open : ""}`}>
         <li>Work</li>
-        <li>Clients</li>
         <li onClick={onServicesClick}>Services</li>
         <li>About</li>
         <li>Blog</li>

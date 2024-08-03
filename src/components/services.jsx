@@ -7,26 +7,31 @@ export default function Services() {
             <h2>Our Services</h2>
     
             <div className={styles.serviceItem}>
-                <h3 className={styles.serviceTitle}>Branding</h3>
+                <h3 className={styles.serviceTitle}>Design</h3>
                 <div className={styles.serviceContent}>
                     <div className={styles.textContent}>
-                        <p>Our approach centers on the belief that brand and user experience (UX) are fundamentally interconnected. We specialize in developing and presenting cohesive digital brand identities across multiple channels. Our team provides strategic support and detailed guidelines to maintain brand uniformity.</p>
+                        <p>Our design philosophy is rooted in creativity and functionality. We craft visually stunning and user-centric designs that elevate your brand and engage your audience. Our services include:</p>
                         <ul>
-                            <li>Comprehensive Brand Planning</li>
-                            <li>Structural Brand Design</li>
-                            <li>Crafting Brand Voice</li>
-                            <li>Visual Branding Elements</li>
-                            <li>Consistency Guidelines</li>
-                            <li>Immersive Brand Interactions</li>
+                            <li>UI/UX Design</li>
+                            <li>Graphic Design</li>
+                            <li>Interactive Prototyping</li>
+                            <li>Visual Identity Systems</li>
+                            <li>Design Systems and Guidelines</li>
+                            <li>Creative Direction</li>
                         </ul>
                     </div>
-                    <Image src="/images/bite_nites.png" alt="Bite Nites" width={400} height={400} className={styles.imageRight} />
+                    <Image src="/images/design_example.png" alt="Design Example" width={400} height={400} className={styles.imageRight} />
                 </div>  
             </div>
     
             <div className={styles.serviceItem}>
                 <h3 className={styles.serviceTitle}>Web Development</h3>
-                <p className={styles.serviceContent}>Your online presence is your digital handshake. Make it a strong and memorable one with our top-notch web development services. We don&apos;t just build websites; we create digital experiences. Our team of expert developers and designers work collaboratively to produce responsive, visually appealing, and user-friendly websites that captivate visitors and convert them into loyal customers. We focus on performance and usability, ensuring your site loads quickly and navigates smoothly. With an emphasis on SEO and mobile optimization, we make sure your site is easily discoverable and accessible. Let&apos;s build a site that&apos;s as dynamic and engaging as your business, and watch as it enhances your digital footprint.</p>
+                <div className={styles.serviceContent}>
+                    <div className={styles.textContent}>
+                        <p>Transform your online presence with our expert web development services. We build responsive, user-friendly websites that not only look great but also provide a seamless experience for your visitors, enhancing engagement and driving conversions.</p>
+                    </div>
+                    <Image src="/images/web-dev-image.png" alt="Web Development" width={400} height={400} className={styles.imageRight} />
+                </div>  
             </div>
     
             <div className={styles.serviceItem}>

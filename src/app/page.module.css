@@ -133,7 +133,7 @@
 
 /* ... Hero 3 ... */
 .hero_3 {
-  font-family: 'Gantari', sans-serif;
+  font-family: 'Gantari', sans-serif; /* Keep only one font-family declaration */
   border-radius: 10px;
   font-size: 40px;
   display: flex;
@@ -230,3 +230,18 @@
     align-items: center;
   }
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Gantari&display=swap');
+
+
+.hero_5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero_5 .clients {
+  font-weight: 100 !important;
+}
+

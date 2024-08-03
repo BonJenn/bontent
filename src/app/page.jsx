@@ -29,7 +29,7 @@ export default function Home() {
   };
 
   const items = [
-    { title: "Branding", content: "Our approach centers on the belief that brand and user experience (UX) are fundamentally interconnected. We specialize in developing and presenting cohesive digital brand identities across multiple channels. Our team provides strategic support and detailed guidelines to maintain brand uniformity." },
+    { title: "Design", content: "Our design philosophy is rooted in creativity and functionality. We craft visually stunning and user-centric designs that elevate your brand and engage your audience. Our services include UI/UX Design, Graphic Design, Interactive Prototyping, Visual Identity Systems, Design Systems and Guidelines, and Creative Direction." },
     { title: "Web Development", content: "Transform your online presence with our expert web development services. We build responsive, user-friendly websites that not only look great but also provide a seamless experience for your visitors, enhancing engagement and driving conversions." },
     { title: "Software Development", content: "Turn your ideas into reality with our custom software development services. From concept to deployment, we create powerful, scalable software solutions tailored to meet your specific business needs, leveraging the latest technologies to deliver exceptional performance." },
   ];
@@ -53,7 +53,7 @@ export default function Home() {
                 </video>
               </div>
               <h1 className={styles.heroText}>
-                <span style={{ color: 'white' }}>BONTENT</span> is a brand strategy <span style={{ color: 'white' }}>&amp;</span> digital solutions agency.
+                <span style={{ color: 'white' }}>BONTENT</span> is a modern software development agency.
               </h1>
             </div>
 
@@ -62,9 +62,7 @@ export default function Home() {
                 <span style={{ fontWeight: '100' }}>Enhancing&nbsp;</span>
                 <span className={styles.highlight}> brand presence </span>
                 <span style={{ fontWeight: '100' }}> through&nbsp;</span>
-                <span className={styles.highlight}> artistic design&nbsp;</span>
-                <span style={{ fontWeight: '100' }}> and </span>
-                <span className={styles.highlight}> digital products</span>.
+                <span className={styles.highlight}> advanced digital solutions.&nbsp;</span>
               </h1>
             </div>
 
@@ -105,7 +103,7 @@ export default function Home() {
             </div>
 
             <div className={styles.hero_5}>
-              <p>Products go Here</p>
+              <h2 className={styles.clients}>Products go Here</h2>
             </div>
           </>
         )}
