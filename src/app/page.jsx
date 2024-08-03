@@ -53,7 +53,7 @@ export default function Home() {
                 </video>
               </div>
               <h1 className={styles.heroText}>
-                <span style={{ color: 'white' }}>BONTENT</span> is a modern software development agency.
+                <span style={{ color: 'white' }}></span>We are a modern software development agency.
               </h1>
             </div>
 
