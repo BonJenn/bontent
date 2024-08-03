@@ -156,6 +156,10 @@
   list-style: none;
 }
 
+.title {
+    font-weight: 100;
+}
+
 .listItem {
   margin-bottom: 10px;
   cursor: pointer;
@@ -166,6 +170,7 @@
   overflow: hidden;
   width: 100%;
   box-sizing: border-box;
+  font-weight: 100;
 }
 
 .listItem.open .content {
