@@ -1,10 +1,7 @@
 'use client'
 
 import { useState, useRef, useEffect } from "react";
-import Image from 'next/image';
-import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import styles from "./page.module.css";
 import Header from "../components/header";
