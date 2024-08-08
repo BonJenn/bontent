@@ -58,9 +58,9 @@ export default function Home() {
   };
 
   const items = [
-    { title: "Branding", content: "Our approach centers on the belief that brand and user experience (UX) are fundamentally interconnected. We specialize in developing and presenting cohesive digital brand identities across multiple channels. Our team provides strategic support and detailed guidelines to maintain brand uniformity." },
-    { title: "Web Development", content: "Transform your online presence with our expert web development services. We build responsive, user-friendly websites that not only look great but also provide a seamless experience for your visitors, enhancing engagement and driving conversions." },
-    { title: "Software Development", content: "Turn your ideas into reality with our custom software development services. From concept to deployment, we create powerful, scalable software solutions tailored to meet your specific business needs, leveraging the latest technologies to deliver exceptional performance." },
+    { title: "Branding", content: "Our approach centers on the belief that brand and user experience (UX) are fundamentally interconnected. We specialize in developing and presenting cohesive digital brand identities across multiple channels. <br /> <br /> Our team provides strategic support and detailed guidelines to maintain brand uniformity." },
+    { title: "Web Development", content: "Transform your online presence with our expert web development services. <br /> <br /> We build responsive, user-friendly websites that not only look great but also provide a seamless experience for your visitors, enhancing engagement and driving conversions." },
+    { title: "Software Development", content: "Turn your ideas into reality with our custom software development services. <br /> <br /> From concept to deployment, we create powerful, scalable internal and customer-facing software solutions tailored to meet your specific business needs. Our platforms leverage the latest technologies to deliver exceptional performance." },
   ];
 
   return (
@@ -113,8 +113,8 @@ export default function Home() {
                       <div 
                         className={styles.content} 
                         ref={el => contentRefs.current[index] = el}
+                        dangerouslySetInnerHTML={{ __html: item.content }}
                       >
-                        {item.content}
                       </div>
                     </li>
                   ))}

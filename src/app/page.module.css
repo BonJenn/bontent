@@ -31,6 +31,7 @@
   overflow: hidden;
   transition: max-height 0.5s ease-out, padding 0.5s ease-out;
   padding: 0 20px;
+  white-space: normal; /* This allows line breaks */
 }
 
 /* ... Hero 1 ... */
@@ -226,6 +227,59 @@
 @media (max-width: 768px) {
   .hero_1 {
     display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .title {
+    font-size: 0.5em;
+  }
+
+
+  .heroText {
+    font-size: 0.5em;
+  }
+
+  .hero_2 {
+    font-size: 5px;
+  }
+
+  .enhancedText {
+    font-size: 0.5em;
+  }
+
+  .hero_3 {
+    font-size: 10px;
+  }
+
+  .hero_4 {
+    font-size: 10px;
+  }
+
+  .contactSection {
+    padding: 5px;
+  }
+
+  .contactForm {
+    padding: 1.5px;
+  }
+
+  .formGroup label {
+    font-size: 0.7em;
+  }
+
+  .formGroup input,
+  .formGroup textarea {
+    font-size: 0.7em;
+  }
+
+  .submitButton {
+    font-size: 0.7em;
+    padding: 5px 10px;
+  }
+
+  .body h1, .body h2, .body h3, .body h4, .body h5, .body h6, .body p, .body a, .body li, .body span {
+    font-size: 1em;
   }
 }
 
