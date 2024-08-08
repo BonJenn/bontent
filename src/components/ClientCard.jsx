@@ -28,7 +28,9 @@ export default function ClientCard({ logo, name, description, width, height, bac
           </div>
           <div className={styles.textContent}>
             <h3>{name}</h3>
-            <p dangerouslySetInnerHTML={{ __html: description }}></p>
+            <div className={styles.descriptionWrapper}>
+              <p dangerouslySetInnerHTML={{ __html: description }}></p>
+            </div>
           </div>
         </div>
       </div>

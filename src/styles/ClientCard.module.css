@@ -65,38 +65,44 @@
   width: calc(100% - 40px);
   box-sizing: border-box;
   overflow: hidden;
-  transition: all 0.5s ease-out;
-}
-
-.textContent p {
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transform: translateY(-20px);
-  transition: opacity 0.5s ease-out, max-height 0.5s ease-out, transform 0.5s ease-out, margin 0.5s ease-out;
-  margin: 0;
-  white-space: pre-wrap; /* Preserve line breaks */
-}
-
-.clientCard.expanded .textContent p {
-  opacity: 1;
-  max-height: 1000px; /* Adjust this value based on your content */
-  transform: translateY(0);
-  margin: 10px 0 0; /* Restore original margin */
 }
 
 .clientCard h3 {
   margin: 0;
   font-size: 1.5em;
+  position: relative;
+  z-index: 3;
+ 
+  padding: 10px;
+  border-radius: 4px;
+  display: inline-block;
 }
 
-.clientCard p {
-  margin: 10px 0 0;
+.descriptionWrapper {
   overflow: hidden;
   max-height: 0;
-  transition: max-height 1.5s ease-out;
+  opacity: 0;
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
 }
 
-.clientCard.expanded p {
-  max-height: 300px;
+.clientCard.expanded .descriptionWrapper {
+  max-height: 700px;
+  opacity: 1;
+}
+
+/* Mobile and Tablet Styles */
+@media (max-width: 768px) {
+  .clientCard h3 {
+    font-size: 1.2em;
+  }
+
+  .descriptionWrapper {
+    font-size: 0.9em;
+  }
+
+  .textContent {
+    padding: 8px;
+    margin: 10px;
+    width: calc(100% - 20px);
+  }
 }

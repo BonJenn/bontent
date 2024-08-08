@@ -274,3 +274,67 @@
 .submitButton:hover {
   background-color: darken(var(--accent-color), 10%);
 }
+
+/* Mobile and Tablet Styles */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.2em;
+  }
+
+  .hero_1 {
+    font-size: 25px;
+    padding: 20px;
+  }
+
+  .heroText {
+    font-size: 1.5em;
+    padding: 10px;
+  }
+
+  .hero_2 {
+    font-size: 30px;
+    padding: 10px;
+  }
+
+  .enhancedText {
+    font-size: 1.5em;
+    padding: 10px;
+  }
+
+  .hero_3 {
+    font-size: 30px;
+    padding: 10px;
+  }
+
+  .hero_4 {
+    font-size: 30px;
+    padding: 20px 0;
+  }
+
+  .contactSection {
+    padding: 20px;
+  }
+
+  .contactForm {
+    padding: 10px;
+  }
+
+  .formGroup label {
+    font-size: 0.9em;
+  }
+
+  .formGroup input,
+  .formGroup textarea {
+    font-size: 0.9em;
+  }
+
+  .submitButton {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+
+  /* Additional text elements */
+  .body h1, .body h2, .body h3, .body h4, .body h5, .body h6, .body p, .body a, .body li, .body span {
+    font-size: 0.9em; /* Adjust as needed */
+  }
+}
