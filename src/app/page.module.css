@@ -220,6 +220,12 @@
   }
 }
 
+@media (max-width: 768px) {
+  .hero_1 {
+    display: none;
+  }
+}
+
 /* Contact Section */
 .contactSection {
   padding: 40px;
@@ -335,6 +341,6 @@
 
   /* Additional text elements */
   .body h1, .body h2, .body h3, .body h4, .body h5, .body h6, .body p, .body a, .body li, .body span {
-    font-size: 0.9em; /* Adjust as needed */
+    font-size: 1.3em; /* Adjust as needed */
   }
 }
