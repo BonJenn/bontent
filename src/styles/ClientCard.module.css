@@ -4,7 +4,7 @@
   padding: 20px;
   margin: 10px 0;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease-out;
   width: 100%;
   max-width: 1200px;
   box-sizing: border-box;
@@ -47,8 +47,29 @@
 .textContent {
   background-color: rgba(0, 0, 0, 0.6);
   padding: 10px;
+  margin: 20px;
   border-radius: 4px;
-  width: 100%;
+  width: calc(100% - 40px);
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: all 0.5s ease-out;
+}
+
+.textContent p {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease-out, max-height 0.5s ease-out, transform 0.5s ease-out, margin 0.5s ease-out;
+  margin: 0;
+  white-space: pre-wrap; /* Preserve line breaks */
+}
+
+.clientCard.expanded .textContent p {
+  opacity: 1;
+  max-height: 1000px; /* Adjust this value based on your content */
+  transform: translateY(0);
+  margin: 10px 0 0; /* Restore original margin */
 }
 
 .clientCard h3 {
@@ -60,9 +81,9 @@
   margin: 10px 0 0;
   overflow: hidden;
   max-height: 0;
-  transition: max-height 0.3s ease;
+  transition: max-height 1.5s ease-out;
 }
 
 .clientCard.expanded p {
-  max-height: 200px;
+  max-height: 300px;
 }
