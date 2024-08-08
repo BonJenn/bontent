@@ -140,9 +140,7 @@ export default function Home() {
                 <ClientCard 
                       logo="/images/vistaview_logo.png"
                       name="Vistaview Technical Solutions"
-                      description={
-                        "Vistaview is a video engineering services company specializing in special event filming and broadcasting.<br /> <br /> Bontent developed the company's web presence in addition to a custom internal software solution."
-                      }
+                      description="Vistaview is a video engineering services company specializing in special event filming and broadcasting.<br /> <br /> Bontent developed the company's web presence in addition to a custom internal software solution."
                       width={300}
                       height={150}
                       backgroundImage="/images/client_images/vistaview_background.jpg"
@@ -152,7 +150,7 @@ export default function Home() {
                   <ClientCard 
                     logo="/images/bitcoin_brainiac_logo.png"
                     name="Bitcoin Brainiac"
-                    description="Bitcoin Brainiac is an online education platform for free Bitcoin education. <br /> <br /> Bontent developed the company's brand strategy, and built out their dynamic web  education app which includes a video player, comments, quizzes, and more."
+                    description="Bitcoin Brainiac is an online education platform for free Bitcoin education. <br /> <br /> Bontent developed the company's brand strategy, and built out their dynamic web education app which includes a video player, comments, quizzes, and more."
                     width={300}
                     height={150}
                     backgroundImage="/images/client_images/bitcoin_brainiac_background.jpg"

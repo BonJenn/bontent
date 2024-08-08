@@ -24,11 +24,11 @@ export default function ClientCard({ logo, name, description, width, height, bac
         />
         <div className={styles.cardContent}>
           <div className={styles.logoContainer}>
-            <Image src={logo} alt={name} width={width} height={height} />
+            <Image src={logo} alt={name} width={width} height={height} className={styles.logo} />
           </div>
           <div className={styles.textContent}>
             <h3>{name}</h3>
-            <p>{description}</p>
+            <p dangerouslySetInnerHTML={{ __html: description }}></p>
           </div>
         </div>
       </div>
