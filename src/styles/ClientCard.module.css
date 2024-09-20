@@ -1,16 +1,17 @@
 .clientCard {
   background-color: #f5f5f5;
   border-radius: 8px;
-  padding: 20px;
-  margin: 10px 0;
+  padding: 15px; /* Reduced from 20px */
+  margin: 8px 0; /* Reduced from 10px */
   cursor: pointer;
   transition: all 0.5s ease-out;
   width: 100%;
-  max-width: 1200px;
+  max-width: 900px; /* Reduced from 1200px */
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
-  min-height: 200px;
+  min-height: 150px; /* Reduced from 200px */
+  height: 200px; /* Adjust this value to make the cards less tall */
 }
 
 .clientCard:hover {
@@ -33,26 +34,31 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 10px;
+  gap: 8px; /* Reduced from 10px to tighten up spacing */
   color: white;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+  padding: 15px; /* Reduce padding to make content fit better */
 }
 
 .logoContainer {
   background-color: rgba(255, 255, 255, 0.8);
-  padding: 10px;
+  padding: 8px; /* Reduced from 10px */
   border-radius: 4px;
+  max-height: 50px; /* Reduced from 60px */
+  max-width: 100px; /* Added to limit logo width */
 }
 
 .textContent {
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 10px;
-  margin: 20px;
+  padding: 8px; /* Reduced from 10px */
+  margin: 15px; /* Reduced from 20px */
   border-radius: 4px;
-  width: calc(100% - 40px);
+  width: calc(100% - 30px); /* Adjusted to match new margin */
   box-sizing: border-box;
   overflow: hidden;
   transition: all 0.5s ease-out;
+  max-height: 100px; /* Limit text content height */
+  font-size: 0.9em; /* Added to reduce text size */
 }
 
 .textContent p {
@@ -74,7 +80,7 @@
 
 .clientCard h3 {
   margin: 0;
-  font-size: 1.5em;
+  font-size: 1.3em; /* Reduced from 1.5em */
 }
 
 .clientCard p {
@@ -85,5 +91,9 @@
 }
 
 .clientCard.expanded p {
-  max-height: 300px;
+  max-height: 250px; /* Reduced from 300px */
+}
+
+.expanded {
+  height: 300px; /* Adjust this value for the expanded state */
 }
