@@ -16,7 +16,7 @@ export default function Header({ onServicesClick }) {
       <div className={styles.hamburger} onClick={toggleMenu}>
         &#9776;
       </div>
-      {/* Commented out navigation list
+  
       <ul className={`${styles.nav_list} ${menuOpen ? styles.open : ""}`}>
         <li>Work</li>
         <li onClick={onServicesClick}>Services</li>
@@ -24,7 +24,7 @@ export default function Header({ onServicesClick }) {
         <li>Blog</li>
         <li>Contact</li>
       </ul>
-      */}
+      
     </header>
   );
 }

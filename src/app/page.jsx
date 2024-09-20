@@ -14,6 +14,24 @@ export default function Home() {
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [appointments, setAppointments] = useState([]);
 
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission logic here
+    console.log("Form submitted:", formData);
+  };
+
   useEffect(() => {
     contentRefs.current.forEach((content, index) => {
       if (content) {
@@ -40,9 +58,9 @@ export default function Home() {
   };
 
   const items = [
-    { title: "Branding", content: "Our approach centers on the belief that brand and user experience (UX) are fundamentally interconnected. We specialize in developing and presenting cohesive digital brand identities across multiple channels. Our team provides strategic support and detailed guidelines to maintain brand uniformity." },
-    { title: "Web Development", content: "Transform your online presence with our expert web development services. We build responsive, user-friendly websites that not only look great but also provide a seamless experience for your visitors, enhancing engagement and driving conversions." },
-    { title: "Software Development", content: "Turn your ideas into reality with our custom software development services. From concept to deployment, we create powerful, scalable software solutions tailored to meet your specific business needs, leveraging the latest technologies to deliver exceptional performance." },
+    { title: "Branding", content: "Our approach centers on the belief that brand and user experience (UX) are fundamentally interconnected. We specialize in developing and presenting cohesive digital brand identities across multiple channels. <br /> <br /> Our team provides strategic support and detailed guidelines to maintain brand uniformity." },
+    { title: "Web Development", content: "Transform your online presence with our expert web development services. <br /> <br /> We build responsive, user-friendly websites that not only look great but also provide a seamless experience for your visitors, enhancing engagement and driving conversions." },
+    { title: "Software Development", content: "Turn your ideas into reality with our custom software development services. <br /> <br /> From concept to deployment, we create powerful, scalable internal and customer-facing software solutions tailored to meet your specific business needs. Our platforms leverage the latest technologies to deliver exceptional performance." },
   ];
 
   return (
@@ -95,8 +113,8 @@ export default function Home() {
                       <div 
                         className={styles.content} 
                         ref={el => contentRefs.current[index] = el}
+                        dangerouslySetInnerHTML={{ __html: item.content }}
                       >
-                        {item.content}
                       </div>
                     </li>
                   ))}
@@ -122,9 +140,7 @@ export default function Home() {
                 <ClientCard 
                       logo="/images/vistaview_logo.png"
                       name="Vistaview Technical Solutions"
-                      description={
-                        "Vistaview is a video engineering services company specializing in special event filming and broadcasting.<br /> <br /> Bontent developed the company's web presence in addition to a custom internal software solution."
-                      }
+                      description="Vistaview is a video engineering services company specializing in special event filming and broadcasting.<br /> <br /> Bontent developed the company's web presence in addition to a custom internal software solution."
                       width={300}
                       height={150}
                       backgroundImage="/images/client_images/vistaview_background.jpg"
@@ -134,18 +150,71 @@ export default function Home() {
                   <ClientCard 
                     logo="/images/bitcoin_brainiac_logo.png"
                     name="Bitcoin Brainiac"
-                    description="Bitcoin Brainiac is an online education platform for free Bitcoin education. <br /> <br /> Bontent developed the company's brand strategy, and built out their dynamic web  education app which includes a video player, comments, quizzes, and more."
+                    description="Bitcoin Brainiac is an online education platform for free Bitcoin education. <br /> <br /> Bontent developed the company's brand strategy, and built out their dynamic web education app which includes a video player, comments, quizzes, and more."
                     width={300}
                     height={150}
                     backgroundImage="/images/client_images/bitcoin_brainiac_background.jpg"
                     objectPosition="center 10%"
                   />
+
+               
                 </div>
+                  <h3>View All</h3>
               </div>
             </div>     
 
             <div className={styles.hero_5}>
-              <p>Products go Here</p>
+              <div className={styles.contactSection}>
+                <h2>Have a Project?</h2>
+                <form onSubmit={handleSubmit} className={styles.contactForm}>
+                  <div className={styles.formGroup}>
+                    <label htmlFor="name">Name</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div className={styles.formGroup}>
+                    <label htmlFor="email">Email</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div className={styles.formGroup}>
+                    <label htmlFor="phone">Phone</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div className={styles.formGroup}>
+                    <label htmlFor="message">Message</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      required
+                    ></textarea>
+                  </div>
+                  <button type="submit" className={styles.submitButton}>
+                    Send Message
+                  </button>
+                </form>
+              </div>
             </div>
 
           

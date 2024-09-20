@@ -1,5 +1,8 @@
 import styles from "../styles/services.module.css";
-import Image from 'next/image';
+import Lottie from "lottie-react";
+import designAnimation from '../../public/animations/design_animation.json'
+import webDesignAnimation from '../../public/animations/webdesign_animation.json';
+import softwareDevelopmentAnimation from '../../public/animations/software_development_animation.json'
 
 export default function Services() {
     return (
@@ -20,7 +23,13 @@ export default function Services() {
                             <li>Creative Direction</li>
                         </ul>
                     </div>
-                    <Image src="/images/design_example.png" alt="Design Example" width={400} height={400} className={styles.imageRight} />
+                    <Lottie 
+                        animationData={webDesignAnimation} 
+                        loop={true}
+                        autoplay={true}
+                        style={{ width: 400, height: 400 }}
+                        className={styles.imageRight}
+                    />
                 </div>  
             </div>
     
@@ -30,13 +39,30 @@ export default function Services() {
                     <div className={styles.textContent}>
                         <p>Transform your online presence with our expert web development services. We build responsive, user-friendly websites that not only look great but also provide a seamless experience for your visitors, enhancing engagement and driving conversions.</p>
                     </div>
-                    <Image src="/images/web-dev-image.png" alt="Web Development" width={400} height={400} className={styles.imageRight} />
+                    <Lottie 
+                        animationData={designAnimation} 
+                        loop={true}
+                        autoplay={true}
+                        style={{ width: 400, height: 400 }}
+                        className={styles.imageRight}
+                    />
                 </div>  
             </div>
     
             <div className={styles.serviceItem}>
                 <h3 className={styles.serviceTitle}>Software Development</h3>
-                <p className={styles.serviceContent}>Got a groundbreaking idea? Let&apos;s make it happen. Our custom software development services take your concepts from imagination to reality with precision and expertise. We specialize in developing powerful, scalable solutions tailored to your unique business needs. Our process begins with understanding your vision and requirements. From there, we leverage cutting-edge technology and industry best practices to design, develop, and deploy software that delivers exceptional performance. Whether it&apos;s a mobile app, a complex enterprise solution, or anything in between, we ensure that the final product is robust, secure, and user-friendly. Together, we&apos;ll turn your vision into a digital masterpiece that drives innovation and growth.</p>
+                <div className={styles.serviceContent}>
+                    <div className={styles.textContent}>
+                        <p>Got a groundbreaking idea? Let&apos;s make it happen. Our custom software development services take your concepts from imagination to reality with precision and expertise. We specialize in developing powerful, scalable solutions tailored to your unique business needs. Our process begins with understanding your vision and requirements. From there, we leverage cutting-edge technology and industry best practices to design, develop, and deploy software that delivers exceptional performance. Whether it&apos;s a mobile app, a complex enterprise solution, or anything in between, we ensure that the final product is robust, secure, and user-friendly. Together, we&apos;ll turn your vision into a digital masterpiece that drives innovation and growth.</p>
+                    </div>
+                    <Lottie 
+                        animationData={softwareDevelopmentAnimation} 
+                        loop={true}
+                        autoplay={true}
+                        style={{ width: 400, height: 400 }}
+                        className={styles.imageRight}
+                    />
+                </div>
             </div>
         </div>
     );
