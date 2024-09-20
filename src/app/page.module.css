@@ -5,6 +5,7 @@
   background-color: var(--background-color);
   color: var(--text-color);
   font-family: 'Manrope', sans-serif;
+  background-color: white;
 }
 
 .title {
