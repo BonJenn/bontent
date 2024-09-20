@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
 /* General styles */
 .body {
   background-color: var(--background-color);
   color: var(--text-color);
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Manrope', sans-serif;
 }
 
 .title {
@@ -33,7 +35,7 @@
 
 /* ... Hero 1 ... */
 .hero_1 {
-  font-family: 'PT Serif', serif;
+  font-family: 'Manrope', serif;
   border-radius: 0px 0px 10px 10px;
   font-size: 45px;
   color: rgba(160, 107, 107, 0.785);
@@ -89,7 +91,7 @@
 
 /* ... Hero 2 ... */
 .hero_2 {
-  font-family: 'Gantari', sans-serif;
+  font-family: 'Manrope', sans-serif;
   color: rgba(160, 107, 107, 0.785);
   font-size: 40px;
   display: flex;
@@ -133,7 +135,7 @@
 
 /* ... Hero 3 ... */
 .hero_3 {
-  font-family: 'Gantari', sans-serif;
+  font-family: 'Manrope', sans-serif;
   border-radius: 10px;
   font-size: 40px;
   display: flex;
@@ -175,6 +177,7 @@
 
 /* ... Hero 4 ... */
 .hero_4 {
+  font-family: 'Manrope';
   font-size: 40px;
   font-weight: 100;
   display: flex;

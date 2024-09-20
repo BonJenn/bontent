@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
 
 .header {
     background-color: #efedda;
@@ -9,7 +11,7 @@
     justify-content: space-between;
     align-items: center;
     border-radius: 10px 10px 0px 0px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Manrope', sans-serif;
 
   }
   
