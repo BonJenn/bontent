@@ -13,15 +13,10 @@ export default function Services() {
                 <h3 className={styles.serviceTitle}>Design</h3>
                 <div className={styles.serviceContent}>
                     <div className={styles.textContent}>
-                        <p>Our design philosophy is rooted in creativity and functionality. We craft visually stunning and user-centric designs that elevate your brand and engage your audience. Our services include:</p>
-                        <ul>
-                            <li>UI/UX Design</li>
-                            <li>Graphic Design</li>
-                            <li>Interactive Prototyping</li>
-                            <li>Visual Identity Systems</li>
-                            <li>Design Systems and Guidelines</li>
-                            <li>Creative Direction</li>
-                        </ul>
+                        <p>We craft visually stunning and user-centric designs that elevate your brand and engage your audience. Our design services include UI/UX design, graphic design, interactive prototyping, visual identity systems, and creative direction.<br>
+                        </br>
+                        <br></br> 
+                        We blend creativity with functionality to deliver impactful design solutions tailored to your needs.</p>
                     </div>
                     <Lottie 
                         animationData={webDesignAnimation} 
@@ -37,7 +32,10 @@ export default function Services() {
                 <h3 className={styles.serviceTitle}>Web Development</h3>
                 <div className={styles.serviceContent}>
                     <div className={styles.textContent}>
-                        <p>Transform your online presence with our expert web development services. We build responsive, user-friendly websites that not only look great but also provide a seamless experience for your visitors, enhancing engagement and driving conversions.</p>
+                        <p>Transform your online presence with our expert web development services. We build responsive, user-friendly websites that not only look great but also provide a seamless experience for your visitors. <br>
+                        </br>
+                        <br></br> 
+                        Our focus on performance, accessibility, and modern technologies ensures your site stands out, enhances engagement, and drives conversions.</p>
                     </div>
                     <Lottie 
                         animationData={designAnimation} 
@@ -53,7 +51,10 @@ export default function Services() {
                 <h3 className={styles.serviceTitle}>Software Development</h3>
                 <div className={styles.serviceContent}>
                     <div className={styles.textContent}>
-                        <p>Got a groundbreaking idea? Let&apos;s make it happen. Our custom software development services take your concepts from imagination to reality with precision and expertise. We specialize in developing powerful, scalable solutions tailored to your unique business needs. Our process begins with understanding your vision and requirements. From there, we leverage cutting-edge technology and industry best practices to design, develop, and deploy software that delivers exceptional performance. Whether it&apos;s a mobile app, a complex enterprise solution, or anything in between, we ensure that the final product is robust, secure, and user-friendly. Together, we&apos;ll turn your vision into a digital masterpiece that drives innovation and growth.</p>
+                        <p>Turn your ideas into reality with our custom software development services. We specialize in creating powerful, scalable solutions tailored to your unique business needs.<br>
+                        </br>
+                        <br></br>
+                         From mobile apps to complex enterprise systems, we leverage cutting-edge technology and best practices to deliver robust, secure, and user-friendly software that drives innovation and growth for your business.</p>
                     </div>
                     <Lottie 
                         animationData={softwareDevelopmentAnimation} 
