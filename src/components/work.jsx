@@ -1,10 +1,35 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import ClientCard from './ClientCard';
 import styles from '../styles/work.module.css';
+import animationStyles from '../styles/animations.module.css'; // Import the animation styles
 
 export default function Work() {
+  const workRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add(animationStyles.fadeInUp);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (workRef.current) {
+      observer.observe(workRef.current);
+    }
+
+    return () => {
+      if (workRef.current) {
+        observer.unobserve(workRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className={styles.workContainer}>
+    <div className={styles.workContainer} ref={workRef}>
       <h2>Our Work</h2>
       <div className={styles.clientsList}>
         <ClientCard 
