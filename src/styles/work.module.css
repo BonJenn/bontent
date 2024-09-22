@@ -63,15 +63,15 @@
 }
 
 @media (max-width: 768px) {
-  .workGrid {
-    grid-template-columns: 1fr;
+  .workTitle {
+    font-size: 2em; /* Adjust font size for smaller screens */
   }
 
   .workItemTitle {
-    font-size: 1.25rem;
+    font-size: 1.2em; /* Adjust font size for smaller screens */
   }
 
   .workItemDescription {
-    font-size: 0.9rem;
+    font-size: 1em; /* Adjust font size for smaller screens */
   }
 }

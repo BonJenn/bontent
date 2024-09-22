@@ -96,3 +96,31 @@
 .clientCard.expanded p {
   max-height: 250px; /* Reduced from 300px */
 }
+
+@media (max-width: 768px) {
+  .clientCard {
+    padding: 10px; /* Adjust padding for smaller screens */
+    height: auto; /* Adjust height for smaller screens */
+  }
+
+  .cardContent {
+    gap: 5px; /* Adjust gap for smaller screens */
+  }
+
+  .logoContainer {
+    max-width: 100px; /* Adjust max width for smaller screens */
+    max-height: 100px; /* Adjust max height for smaller screens */
+  }
+
+  .textContent {
+    font-size: 0.8em; /* Adjust font size for smaller screens */
+  }
+
+  .clientCard h3 {
+    font-size: 1.5em; /* Adjust font size for smaller screens */
+  }
+
+  .clientCard p {
+    font-size: 1em; /* Adjust font size for smaller screens */
+  }
+}

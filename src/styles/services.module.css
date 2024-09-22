@@ -70,12 +70,25 @@
 }
 
 @media (max-width: 768px) {
-  .serviceContent {
-    flex-direction: column;
+  .servicesContainer h2 {
+    font-size: 2em; /* Adjust font size for smaller screens */
   }
-  
+
+  .serviceTitle {
+    font-size: 2em; /* Adjust font size for smaller screens */
+  }
+
+  .serviceContent {
+    flex-direction: column; /* Stack content vertically on smaller screens */
+    gap: 10px; /* Adjust gap for smaller screens */
+  }
+
+  .textContent {
+    font-size: 1em; /* Adjust font size for smaller screens */
+  }
+
   .imageRight {
-    max-width: 100%;
-    margin-top: 20px;
+    width: 100%; /* Make image full width on smaller screens */
+    height: auto; /* Maintain aspect ratio */
   }
 }

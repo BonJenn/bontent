@@ -296,3 +296,51 @@
   background-color: rgba(140, 87, 87, 0.785);
 }
 
+@media (max-width: 768px) {
+  .hero_1 {
+    font-size: 1.5em; /* Adjust font size for smaller screens */
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .hero_2 {
+    font-size: 1.2em; /* Adjust font size for smaller screens */
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .hero_3 {
+    font-size: 1.2em; /* Adjust font size for smaller screens */
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .hero_4 {
+    font-size: 1.2em; /* Adjust font size for smaller screens */
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .hero_5 {
+    font-size: 1.2em; /* Adjust font size for smaller screens */
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .contactSection h2 {
+    font-size: 1.5em; /* Adjust font size for smaller screens */
+  }
+
+  .contactForm {
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .formGroup label {
+    font-size: 1em; /* Adjust font size for smaller screens */
+  }
+
+  .formGroup input,
+  .formGroup textarea {
+    font-size: 1em; /* Adjust font size for smaller screens */
+  }
+
+  .submitButton {
+    font-size: 1em; /* Adjust font size for smaller screens */
+  }
+}
+
