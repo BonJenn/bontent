@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "../styles/header.module.css";
 
-export default function Header({ onHomeClick, onServicesClick }) {
+export default function Header({ onHomeClick, onServicesClick, onWorkClick }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -18,7 +18,7 @@ export default function Header({ onHomeClick, onServicesClick }) {
       </div>
   
       <ul className={`${styles.nav_list} ${menuOpen ? styles.open : ""}`}>
-        <li>Work</li>
+        <li onClick={onWorkClick}>Work</li>
         <li onClick={onServicesClick}>Services</li>
         <li>Contact</li>
       </ul>
