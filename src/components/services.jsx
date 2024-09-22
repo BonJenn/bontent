@@ -13,10 +13,8 @@ export default function Services() {
                 <h3 className={styles.serviceTitle}>Design</h3>
                 <div className={styles.serviceContent}>
                     <div className={styles.textContent}>
-                        <p>We craft visually stunning and user-centric designs that elevate your brand and engage your audience. Our design services include UI/UX design, graphic design, interactive prototyping, visual identity systems, and creative direction.<br>
-                        </br>
-                        <br></br> 
-                        We blend creativity with functionality to deliver impactful design solutions tailored to your needs.</p>
+                   
+                       <p> We blend creativity with functionality to deliver impactful design solutions tailored to your needs. Our expert team combines innovative aesthetics with user-centric principles to create stunning, effective designs.</p>
                     </div>
                     <Lottie 
                         animationData={designAnimation} 
@@ -32,10 +30,7 @@ export default function Services() {
                 <h3 className={styles.serviceTitle}>Web Development</h3>
                 <div className={styles.serviceContent}>
                     <div className={styles.textContent}>
-                        <p>Transform your online presence with our expert web development services. We build responsive, user-friendly websites that not only look great but also provide a seamless experience for your visitors. <br>
-                        </br>
-                        <br></br> 
-                        Our focus on performance, accessibility, and modern technologies ensures your site stands out, enhances engagement, and drives conversions.</p>
+                        <p>Our focus on performance, accessibility, and modern technologies ensures your site stands out, enhances engagement, and drives conversions.</p>
                     </div>
                     <Lottie 
                         animationData={webDesignAnimation} 
@@ -51,10 +46,7 @@ export default function Services() {
                 <h3 className={styles.serviceTitle}>Software Development</h3>
                 <div className={styles.serviceContent}>
                     <div className={styles.textContent}>
-                        <p>Turn your ideas into reality with our custom software development services. We specialize in creating powerful, scalable solutions tailored to your unique business needs.<br>
-                        </br>
-                        <br></br>
-                         From mobile apps to complex enterprise systems, we leverage new technologies like generative AI to deliver robust, secure, and user-friendly software that drives innovation and growth for your business.</p>
+                         From mobile apps to complex enterprise systems, we leverage new technologies like generative AI to deliver robust, secure, and user-friendly software that drives innovation and growth for your business.
                     </div>
                     <Lottie 
                         animationData={softwareDevelopmentAnimation} 
