@@ -7,7 +7,7 @@ import softwareDevelopmentAnimation from '../../public/animations/software_devel
 export default function Services() {
     return (
         <div className={styles.servicesContainer}>
-            <h2>Our Services</h2>
+      
     
             <div className={styles.serviceItem}>
                 <h3 className={styles.serviceTitle}>Design</h3>
@@ -19,7 +19,7 @@ export default function Services() {
                         We blend creativity with functionality to deliver impactful design solutions tailored to your needs.</p>
                     </div>
                     <Lottie 
-                        animationData={webDesignAnimation} 
+                        animationData={designAnimation} 
                         loop={true}
                         autoplay={true}
                         style={{ width: 400, height: 400 }}
@@ -38,7 +38,7 @@ export default function Services() {
                         Our focus on performance, accessibility, and modern technologies ensures your site stands out, enhances engagement, and drives conversions.</p>
                     </div>
                     <Lottie 
-                        animationData={designAnimation} 
+                        animationData={webDesignAnimation} 
                         loop={true}
                         autoplay={true}
                         style={{ width: 400, height: 400 }}

@@ -65,22 +65,7 @@ export default function Home() {
     });
   };
 
-  // Define the items array
-  const items = [
-    {
-      title: "Brand Strategy",
-      content: "We develop comprehensive brand strategies that align with your business goals and resonate with your target audience."
-    },
-    {
-      title: "Digital Solutions",
-      content: "Our digital solutions encompass web development, mobile apps, and custom software to meet your specific needs."
-    },
-    {
-      title: "Creative Design",
-      content: "From logo design to full brand identity systems, we create visually stunning and cohesive designs."
-    }
-    // Add more items as needed
-  ];
+
 
   return (
     <>
@@ -103,9 +88,15 @@ export default function Home() {
             </video>
           </div>
           <h1 className={styles.heroText}>
-            <span style={{ color: 'white' }}>BONTENT</span> is a brand strategy <span style={{ color: 'white' }}>&amp;</span> digital solutions agency.
+            <span style={{ color: 'white' }}>Crafting digital solutions for the modern age.</span>
           </h1>
         </div>
+     
+     
+        <div id="services">
+          <Services />
+        </div>
+
         <div className={styles.hero_2}>
           <h1 className={styles.enhancedText}>
             <span style={{ fontWeight: '100' }}>Enhancing&nbsp;</span>
@@ -116,13 +107,15 @@ export default function Home() {
             <span className={styles.highlight}> digital products</span>.
           </h1>
         </div>
-     
-        <div id="services">
-          <Services />
-        </div>
+
+
+
         <div id="work">
           <Work />
         </div>
+
+  
+
         <div className={styles.hero_5}>
           <div className={styles.contactSection}>
             <h2>Have a Project?</h2>
