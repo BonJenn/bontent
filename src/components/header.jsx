@@ -20,7 +20,6 @@ export default function Header({ onHomeClick, onServicesClick, onWorkClick }) {
       <ul className={`${styles.nav_list} ${menuOpen ? styles.open : ""}`}>
         <li onClick={onWorkClick}>Work</li>
         <li onClick={onServicesClick}>Services</li>
-        <li>Contact</li>
       </ul>
     </header>
   );

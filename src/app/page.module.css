@@ -221,3 +221,76 @@
     align-items: center;
   }
 }
+
+.hero_5 {
+  background-color: white;
+  padding: 60px 0;
+}
+
+.contactSection {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contactSection h2 {
+  font-size: 2.5em;
+  color: rgba(160, 107, 107, 0.785);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.contactForm {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 5px;
+  color: rgba(160, 107, 107, 0.785);
+  font-weight: 600;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: rgba(160, 107, 107, 0.785);
+}
+
+.formGroup textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.submitButton {
+  background-color: rgba(160, 107, 107, 0.785);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.submitButton:hover {
+  background-color: rgba(140, 87, 87, 0.785);
+}
