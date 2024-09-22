@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import styles from "./page.module.css";
 import Header from "../components/header";
 import Footer from "../components/footer";
@@ -8,64 +8,73 @@ import Services from "../components/services";
 import ClientCard from '../components/ClientCard';
 
 export default function Home() {
+  const [showServices, setShowServices] = useState(false);
   const [openIndex, setOpenIndex] = useState(null);
   const contentRefs = useRef([]);
-  const [showServices, setShowServices] = useState(false);
-  const [selectedDate, setSelectedDate] = useState(new Date());
-  const [appointments, setAppointments] = useState([]);
 
+  // Form state
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
   });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+  const handleHomeClick = () => {
+    setShowServices(false);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission logic here
-    console.log("Form submitted:", formData);
+  const handleServicesClick = () => {
+    setShowServices(true);
   };
-
-  useEffect(() => {
-    contentRefs.current.forEach((content, index) => {
-      if (content) {
-        if (openIndex === index) {
-          content.style.maxHeight = content.scrollHeight + "px";
-        } else {
-          content.style.maxHeight = 0;
-        }
-      }
-    });
-  }, [openIndex]);
 
   const handleClick = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  const handleDateChange = (date) => {
-    setSelectedDate(date);
+  // Handle form input changes
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
   };
 
-  const handleBookAppointment = () => {
-    setAppointments([...appointments, selectedDate]);
-    alert(`Appointment booked for ${selectedDate.toDateString()}`);
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Here you would typically send the form data to your server
+    console.log('Form submitted:', formData);
+    // Reset form after submission
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      message: ''
+    });
   };
 
+  // Define the items array
   const items = [
-    { title: "Branding", content: "Our approach centers on the belief that brand and user experience (UX) are fundamentally interconnected. We specialize in developing and presenting cohesive digital brand identities across multiple channels. <br /> <br /> Our team provides strategic support and detailed guidelines to maintain brand uniformity." },
-    { title: "Web Development", content: "Transform your online presence with our expert web development services. <br /> <br /> We build responsive, user-friendly websites that not only look great but also provide a seamless experience for your visitors, enhancing engagement and driving conversions." },
-    { title: "Software Development", content: "Turn your ideas into reality with our custom software development services. <br /> <br /> From concept to deployment, we create powerful, scalable internal and customer-facing software solutions tailored to meet your specific business needs. Our platforms leverage the latest technologies to deliver exceptional performance." },
+    {
+      title: "Brand Strategy",
+      content: "We develop comprehensive brand strategies that align with your business goals and resonate with your target audience."
+    },
+    {
+      title: "Digital Solutions",
+      content: "Our digital solutions encompass web development, mobile apps, and custom software to meet your specific needs."
+    },
+    {
+      title: "Creative Design",
+      content: "From logo design to full brand identity systems, we create visually stunning and cohesive designs."
+    }
+    // Add more items as needed
   ];
 
   return (
     <>
-      <Header onServicesClick={() => setShowServices(true)} />
+      <Header onHomeClick={handleHomeClick} onServicesClick={handleServicesClick} />
       <main className={styles.main}>
         {!showServices && (
           <>
@@ -216,9 +225,6 @@ export default function Home() {
                 </form>
               </div>
             </div>
-
-          
-        
           </>
         )}
 

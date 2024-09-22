@@ -16,9 +16,13 @@
   }
   
   .logo {
-
     font-size: 24px;
     font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .logo h1 {
+    cursor: pointer;
   }
   
   .nav_list {
