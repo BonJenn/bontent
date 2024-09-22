@@ -30,6 +30,7 @@ export default function Home() {
 
   const handleServicesClick = () => {
     setShowServices(true);
+    setShowWork(false); // Ensure work is hidden when services is shown
   };
 
   const handleWorkClick = () => {
