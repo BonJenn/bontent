@@ -11,7 +11,7 @@
   position: relative;
   overflow: hidden;
   min-height: 150px; /* Reduced from 200px */
-  height: 300px; /* Adjust this value to make the cards less tall */
+  height: 450px; /* Adjust this value to make the cards less tall */
 }
 
 .clientCard:hover {
@@ -66,43 +66,33 @@
   box-sizing: border-box;
   overflow: hidden;
   transition: all 0.5s ease-out;
-  max-height: 100px; /* Limit text content height */
+  max-height: 300px; /* Limit text content height */
   font-size: 0.9em; /* Added to reduce text size */
 }
 
 .textContent p {
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transform: translateY(-20px);
-  transition: opacity 0.5s ease-out, max-height 0.5s ease-out, transform 0.5s ease-out, margin 0.5s ease-out;
+  opacity: 1; /* Make text visible */
+  max-height: none; /* Remove height restriction */
+  overflow: visible; /* Ensure text is not hidden */
+  transform: none; /* Remove transform */
+  transition: none; /* Remove transition */
   margin: 0;
   white-space: pre-wrap; /* Preserve line breaks */
 }
 
-.clientCard.expanded .textContent p {
-  opacity: 1;
-  max-height: 1000px; /* Adjust this value based on your content */
-  transform: translateY(0);
-  margin: 10px 0 0; /* Restore original margin */
-}
-
 .clientCard h3 {
   margin: 0;
-  font-size: 1.3em; /* Reduced from 1.5em */
+  font-size: 3em; /* Increased from 1.3em */
 }
 
 .clientCard p {
   margin: 10px 0 0;
-  overflow: hidden;
-  max-height: 0;
-  transition: max-height 1.5s ease-out;
+  overflow: visible; /* Ensure text is not hidden */
+  max-height: none; /* Remove height restriction */
+  transition: none; /* Remove transition */
+  font-size: 1.5em; /* Increased from default */
 }
 
 .clientCard.expanded p {
   max-height: 250px; /* Reduced from 300px */
-}
-
-.expanded {
-  height: 300px; /* Adjust this value for the expanded state */
 }
