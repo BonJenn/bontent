@@ -54,7 +54,7 @@ export default function Services() {
                         <p>Turn your ideas into reality with our custom software development services. We specialize in creating powerful, scalable solutions tailored to your unique business needs.<br>
                         </br>
                         <br></br>
-                         From mobile apps to complex enterprise systems, we leverage cutting-edge technology and best practices to deliver robust, secure, and user-friendly software that drives innovation and growth for your business.</p>
+                         From mobile apps to complex enterprise systems, we leverage new technologies like generative AI to deliver robust, secure, and user-friendly software that drives innovation and growth for your business.</p>
                     </div>
                     <Lottie 
                         animationData={softwareDevelopmentAnimation} 
