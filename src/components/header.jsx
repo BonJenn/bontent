@@ -8,6 +8,10 @@ export default function Header({ onHomeClick, onServicesClick, onWorkClick }) {
     setMenuOpen(!menuOpen);
   };
 
+  const scrollToSection = (id) => {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.logo} onClick={onHomeClick}>
@@ -18,8 +22,8 @@ export default function Header({ onHomeClick, onServicesClick, onWorkClick }) {
       </div>
   
       <ul className={`${styles.nav_list} ${menuOpen ? styles.open : ""}`}>
-        <li onClick={onWorkClick}>Work</li>
-        <li onClick={onServicesClick}>Services</li>
+        <li onClick={() => scrollToSection('work')}>Work</li>
+        <li onClick={() => scrollToSection('services')}>Services</li>
       </ul>
     </header>
   );

@@ -17,6 +17,15 @@ export default function Work() {
           objectPosition="center 75%"
         />
         <ClientCard 
+          logo="/images/baja_shrimp_logo.png"
+          name="The Baja Shrimp"
+          description="The Baja Shrimp is a Southern California-based baja-style cuisine catering company.<br /> <br /> Bontent developed the company's web presence and internal lead generation system."
+          width={300}
+          height={150}
+          backgroundImage="/images/client_images/rec_and_parks.jpg"
+          objectPosition="center 75%"
+        />
+        <ClientCard 
           logo="/images/vistaview_logo.png"
           name="Vistaview Technical Solutions"
           description="Vistaview is a video engineering services company specializing in special event filming and broadcasting.<br /> <br /> Bontent developed the company's web presence in addition to a custom internal software solution."
