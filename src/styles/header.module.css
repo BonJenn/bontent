@@ -2,27 +2,35 @@
 
 
 .header {
-    background-color: #efedda;
+    background-color: #000000;
     color: rgba(160, 107, 107, 0.785);
     padding: 20px;
     text-align: center;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: center; /* Center the content horizontally */
     align-items: center;
-    border-radius: 10px 10px 0px 0px;
     font-family: 'Manrope', sans-serif;
 
   }
   
   .logo {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 1.5em; /* Adjust this value to make the text smaller */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     cursor: pointer;
+    margin: 20px;
   }
   
   .logo h1 {
-    cursor: pointer;
+    background: linear-gradient(45deg, rgba(160, 107, 107, 0.785), #efedda, #007BFF, rgba(160, 107, 107, 0.785));
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradientAnimation 5s ease infinite;
   }
   
   .nav_list {
@@ -97,3 +105,18 @@
     }
   }
   
+.highlight {
+  background: linear-gradient(45deg, rgba(160, 107, 107, 0.785), #efedda, #007BFF, rgba(160, 107, 107, 0.785));
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientAnimation 5s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+

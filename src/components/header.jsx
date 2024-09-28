@@ -15,16 +15,13 @@ export default function Header({ onHomeClick, onServicesClick, onWorkClick }) {
   return (
     <header className={styles.header}>
       <div className={styles.logo} onClick={onHomeClick}>
-        <h1>BONTENT</h1>
+        <h1>bontent</h1>
       </div>
       <div className={styles.hamburger} onClick={toggleMenu}>
         &#9776;
       </div>
   
-      <ul className={`${styles.nav_list} ${menuOpen ? styles.open : ""}`}>
-        <li onClick={() => scrollToSection('work')}>Work</li>
-        <li onClick={() => scrollToSection('services')}>Services</li>
-      </ul>
+
     </header>
   );
 }
