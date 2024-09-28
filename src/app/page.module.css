@@ -2,10 +2,10 @@
 
 /* General styles */
 .body {
-  background-color: var(--background-color);
   color: var(--text-color);
   font-family: 'Manrope', sans-serif;
-  background-color: white;
+  background-color: #072849;
+  
 }
 
 .title {
@@ -37,18 +37,18 @@
 /* ... Hero 1 ... */
 .hero_1 {
   font-family: 'Manrope', serif;
-  border-radius: 0px 0px 10px 10px;
-  font-size: 45px;
-  color: rgba(160, 107, 107, 0.785);
+  border-radius: 20px;
+  font-size: 35px;
+ ;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
-  padding: 40px;
+  margin: 20px auto; /* Center horizontally */
+ 
   box-sizing: border-box;
   overflow: hidden;
-  width: 100%;
+  width: 80%;
   position: relative;
   text-align: center;
   color: white;
@@ -63,6 +63,7 @@
   height: 100%;
   overflow: hidden;
   z-index: -1;
+  
 }
 
 .overlayContainer::before {
@@ -150,7 +151,7 @@
   box-sizing: border-box;
   overflow: hidden;
   color: rgba(160, 107, 107, 0.785);
-  background-color: #efedda;
+
 }
 
 .list_container {
@@ -224,10 +225,9 @@
 }
 
 .hero_5 {
-  background-color: white;
   padding: 60px 0;
 }
-
+ 
 .contactSection {
   max-width: 600px;
   margin: 0 auto;
@@ -242,7 +242,7 @@
 }
 
 .contactForm {
-  background-color: white;
+
   padding: 40px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);

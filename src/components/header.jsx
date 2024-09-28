@@ -17,9 +17,7 @@ export default function Header({ onHomeClick, onServicesClick, onWorkClick }) {
       <div className={styles.logo} onClick={onHomeClick}>
         <h1>bontent</h1>
       </div>
-      <div className={styles.hamburger} onClick={toggleMenu}>
-        &#9776;
-      </div>
+
   
 
     </header>
