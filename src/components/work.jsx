@@ -30,7 +30,7 @@ export default function Work() {
 
   return (
     <div className={styles.workContainer} ref={workRef}>
-      <h2>Our Work</h2>
+            <h1 className={styles.ourWorkTitle}>Our Work</h1>
       <div className={styles.clientsList}>
         <ClientCard 
           logo="/images/RAP_logo.png"

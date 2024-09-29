@@ -7,6 +7,9 @@ import softwareDevelopmentAnimation from '../../public/animations/software_devel
 export default function Services() {
     return (
         <div className={styles.servicesContainer}>
+
+            
+            <h1 className={styles.serviceTitle}>Our Services</h1>
       
     
             <div className={styles.serviceItem}>

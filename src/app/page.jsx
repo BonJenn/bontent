@@ -87,13 +87,20 @@ export default function Home() {
               Your browser does not support the video tag.
             </video>
           </div>
-          <h1 className={styles.heroText}>
-            <span style={{ color: 'white' }}>Crafting digital solutions for the modern age.</span>
-          </h1>
+        
+        </div>
+
+        <div className={styles.newHero1}>
+          <h3 className={styles.heroText}>
+            Welcome to Bontent - your premier digital solutions partner.
+            <br>
+            </br> 
+            We specialize in web design, branding, and software development for small to medium-sized businesses.
+            </h3>
         </div>
      
      
-        <div id="services">
+        <div id="services" className={styles.servicesContainer}>
           <Services />
         </div>
 

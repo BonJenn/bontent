@@ -2,10 +2,9 @@
 
 /* General styles */
 .body {
-  color: var(--text-color);
+  color: white;
   font-family: 'Manrope', sans-serif;
   background-color: #072849;
-  
 }
 
 .title {
@@ -34,18 +33,29 @@
   padding: 0 20px;
 }
 
+/* ...newHero1... */
+.newHero1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; /* Center horizontally */
+  padding: 20px; /* Add padding for better spacing */
+  font-family: 'Manrope', serif;
+  font-size: 20px;
+  flex-direction: column;
+  width: 70%;
+}
+
 /* ... Hero 1 ... */
 .hero_1 {
   font-family: 'Manrope', serif;
   border-radius: 20px;
   font-size: 35px;
- ;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 20px auto; /* Center horizontally */
- 
   box-sizing: border-box;
   overflow: hidden;
   width: 80%;
@@ -63,7 +73,6 @@
   height: 100%;
   overflow: hidden;
   z-index: -1;
-  
 }
 
 .overlayContainer::before {
@@ -88,14 +97,15 @@
 .heroText {
   position: relative;
   z-index: 2;
-  font-size: 2em;
+  font-size: 1.2em; /* Adjust font size for better readability */
+  text-align: center; /* Center text */
+  margin: 0; /* Remove any default margin */
   padding: 20px;
 }
 
 /* ... Hero 2 ... */
 .hero_2 {
   font-family: 'Manrope', sans-serif;
-  color: rgba(160, 107, 107, 0.785);
   font-size: 40px;
   display: flex;
   flex-direction: column;
@@ -107,33 +117,6 @@
   box-sizing: border-box;
   overflow: hidden;
   position: relative;
-}
-
-.enhancedText {
-  position: relative;
-  z-index: 2;
-  font-size: 1.5em; /* Adjust this value to make the text smaller */
-  padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.highlight {
-  background: linear-gradient(45deg, rgba(160, 107, 107, 0.785), #efedda, #007BFF, rgba(160, 107, 107, 0.785));
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: gradientAnimation 5s ease infinite;
-}
-
-@keyframes gradientAnimation {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
 }
 
 /* ... Hero 3 ... */
@@ -151,31 +134,6 @@
   box-sizing: border-box;
   overflow: hidden;
   color: rgba(160, 107, 107, 0.785);
-
-}
-
-.list_container {
-  width: 100%;
-  box-sizing: border-box;
-  overflow: hidden;
-  list-style: none;
-}
-
-.listItem {
-  margin-bottom: 10px;
-  cursor: pointer;
-  padding: 15px;
-  border: 1px solid var(--accent-color);
-  border-radius: 10px;
-  transition: background-color 0.3s, color 0.3s, transform 0.3s;
-  overflow: hidden;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.listItem.open .content {
-  max-height: 1000px;
-  padding: 10px 20px;
 }
 
 /* ... Hero 4 ... */
@@ -186,7 +144,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgba(160, 107, 107, 0.785);
   padding: 40px 0;
 }
 
@@ -227,7 +184,7 @@
 .hero_5 {
   padding: 60px 0;
 }
- 
+
 .contactSection {
   max-width: 600px;
   margin: 0 auto;
@@ -236,13 +193,11 @@
 
 .contactSection h2 {
   font-size: 2.5em;
-  color: rgba(160, 107, 107, 0.785);
   margin-bottom: 30px;
   text-align: center;
 }
 
 .contactForm {
-
   padding: 40px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -255,7 +210,6 @@
 .formGroup label {
   display: block;
   margin-bottom: 5px;
-  color: rgba(160, 107, 107, 0.785);
   font-weight: 600;
 }
 
@@ -272,7 +226,6 @@
 .formGroup input:focus,
 .formGroup textarea:focus {
   outline: none;
-  border-color: rgba(160, 107, 107, 0.785);
 }
 
 .formGroup textarea {
@@ -344,3 +297,29 @@
   }
 }
 
+.gradientText {
+  background: linear-gradient(
+    45deg,
+    rgba(160, 107, 107, 0.785),
+    #efedda,
+    #007BFF,
+    rgba(160, 107, 107, 0.785)
+  );
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientAnimation 5s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

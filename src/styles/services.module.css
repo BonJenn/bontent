@@ -6,8 +6,7 @@
   height: auto;
   align-items: center;
   padding: 40px 20px;
-  background-color: white;
-  color: rgba(160, 107, 107, 0.785);
+  color: white;
   font-family: 'Manrope', sans-serif;
 }
 
@@ -16,7 +15,7 @@
   font-weight: 900;
   margin-bottom: 40px;
   text-align: center;
-  color: rgba(160, 107, 107, 0.785);
+  color: white;
   font-family: 'Gantari', sans-serif;
 }
 
@@ -42,8 +41,8 @@
   font-size: 3.5em;
   font-weight: 900;
   margin-bottom:5px; 
-  color: rgba(160, 107, 107, 0.785);
-  font-family: 'Gantari', sans-serif;
+  color: white;
+  font-family: 'Manrope', sans-serif;
 }
 
 .serviceContent {
