@@ -9,7 +9,7 @@
 
 .footerContainer {
     display: flex;
-    justify-content: space-between;
+    justify-content:  space-evenly;
     width: 100%;
     max-width: 1200px;
     flex-wrap: wrap;
