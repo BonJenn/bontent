@@ -8,28 +8,25 @@ export default function Header({ onHomeClick, onServicesClick, onWorkClick }) {
     setMenuOpen(!menuOpen);
   };
 
-  const scrollToSection = (id) => {
-    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <header className={styles.header}>
       <div className={styles.logo} onClick={onHomeClick}>
         <h1>bontent</h1>
       </div>
 
-      <div className={styles.navigation}>
-        <ul>
-          <li>About</li>
-          <li>Work</li>
-          <li>Contact</li>
-        </ul>
-
+      <div className={styles.hamburger} onClick={toggleMenu}>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-      
 
-  
-
+      <nav className={`${styles.navigation} ${menuOpen ? styles.open : ''}`}>
+        <ul>
+          <li onClick={() => { onHomeClick(); toggleMenu(); }}>About</li>
+          <li onClick={() => { onWorkClick(); toggleMenu(); }}>Work</li>
+          <li onClick={() => { onServicesClick(); toggleMenu(); }}>Services</li>
+        </ul>
+      </nav>
     </header>
   );
 }

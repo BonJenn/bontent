@@ -87,7 +87,7 @@ export default function Home() {
             <div className={styles.overlay}></div>
           </div>
           <h3 className={styles.heroText}>
-            Your premier digital solutions partner.
+            Building digital solutions that drive business growth. Your success is our code.
           </h3>
         </div>
 
@@ -107,7 +107,7 @@ export default function Home() {
             <span style={{ fontWeight: '100' }}>through&nbsp;</span>
             <span className={styles.highlight}> artistic design&nbsp;</span>
             <span style={{ fontWeight: '100' }}> and </span>&nbsp;
-            <span className={styles.highlight}> digital products</span>.
+            <span className={styles.highlight}>digital products</span>.
           </h1>
         </div>
 
