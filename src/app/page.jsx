@@ -95,6 +95,8 @@ export default function Home() {
             Welcome to Bontent - your premier digital solutions partner.
             <br>
             </br> 
+            <br>
+            </br>
             We specialize in web design, branding, and software development for small to medium-sized businesses.
             </h3>
         </div>
@@ -108,7 +110,7 @@ export default function Home() {
           <h1 className={styles.enhancedText}>
             <span style={{ fontWeight: '100' }}>Enhancing&nbsp;</span>
             <span className={styles.highlight}> brand presence </span>&nbsp;
-            <span style={{ fontWeight: '100' }}> through&nbsp;</span>
+            <span style={{ fontWeight: '100' }}>through&nbsp;</span>
             <span className={styles.highlight}> artistic design&nbsp;</span>
             <span style={{ fontWeight: '100' }}> and </span>&nbsp;
             <span className={styles.highlight}> digital products</span>.

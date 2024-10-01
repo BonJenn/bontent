@@ -96,13 +96,14 @@
 
 /* ... Hero 2 ... */
 .hero_2 {
+  text-align: center;
   font-family: 'Manrope', sans-serif;
   font-size: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
@@ -258,6 +259,7 @@
   .hero_2 {
     font-size: 1.2em; /* Adjust font size for smaller screens */
     padding: 20px; /* Adjust padding for smaller screens */
+    width: 100px;
   }
 
   .hero_3 {
