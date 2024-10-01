@@ -18,6 +18,16 @@ export default function Header({ onHomeClick, onServicesClick, onWorkClick }) {
         <h1>bontent</h1>
       </div>
 
+      <div className={styles.navigation}>
+        <ul>
+          <li>About</li>
+          <li>Work</li>
+          <li>Contact</li>
+        </ul>
+
+      </div>
+      
+
   
 
     </header>

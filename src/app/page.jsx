@@ -65,8 +65,6 @@ export default function Home() {
     });
   };
 
-
-
   return (
     <>
       <Header 
@@ -86,22 +84,18 @@ export default function Home() {
               <source src="/images/bontent_animation.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
+            <div className={styles.overlay}></div>
           </div>
-        
+          <h3 className={styles.heroText}>
+            Your premier digital solutions partner.
+          </h3>
         </div>
 
-        <div className={styles.newHero1}>
-          <h3 className={styles.heroText}>
-            Welcome to Bontent - your premier digital solutions partner.
-            <br>
-            </br> 
-            <br>
-            </br>
-            We specialize in web design, branding, and software development for small to medium-sized businesses.
-            </h3>
+        <div id="work">
+          <Work />
         </div>
-     
-     
+
+
         <div id="services" className={styles.servicesContainer}>
           <Services />
         </div>
@@ -117,11 +111,6 @@ export default function Home() {
           </h1>
         </div>
 
-
-
-        <div id="work">
-          <Work />
-        </div>
 
   
 

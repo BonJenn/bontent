@@ -10,9 +10,10 @@
 }
 
 .ourWorkTitle {
-  font-size: 3.5em;
+  font-size: 3em;
   font-weight: 900;
-  margin-bottom:5px; 
+  margin-bottom: 20px;
+  text-align: center;
   color: white;
   font-family: 'Manrope', sans-serif;
 }
@@ -63,6 +64,39 @@
   flex-direction: column;
   align-items: center; /* Center client cards horizontally */
   width: 100%;
+}
+
+.logoRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(240, 240, 240, 0.5);  /* Light grey background with 50% opacity */
+  border-radius: 50%;
+  padding: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease;  /* Added transition for background-color */
+  margin: 10px;
+}
+
+.logoContainer img {
+  width: 140px !important;
+  height: 140px !important;
+  object-fit: contain !important;
+  width: auto;
+  height: auto;
+}
+
+.logoContainer:hover {
+  transform: scale(1.1);
+  background-color: rgba(240, 240, 240, 0.8);  /* 80% opacity on hover */
 }
 
 @media (max-width: 768px) {
