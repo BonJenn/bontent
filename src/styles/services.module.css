@@ -71,10 +71,12 @@
 @media (max-width: 768px) {
   .servicesContainer h2 {
     font-size: 2em; /* Adjust font size for smaller screens */
+  
   }
 
   .serviceTitle {
-    font-size: 2em; /* Adjust font size for smaller screens */
+    font-size: 3em; /* Adjust font size for smaller screens */
+
   }
 
   .serviceContent {
@@ -83,7 +85,7 @@
   }
 
   .textContent {
-    font-size: 1em; /* Adjust font size for smaller screens */
+    font-size: 2em; /* Adjust font size for smaller screens */
   }
 
   .imageRight {
