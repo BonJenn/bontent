@@ -251,6 +251,11 @@
 }
 
 @media (max-width: 768px) {
+
+  .newHero1 {
+    font-size: 20px;
+  }
+  
   .hero_1 {
     font-size: 1.5em; /* Adjust font size for smaller screens */
     padding: 20px; /* Adjust padding for smaller screens */
@@ -259,7 +264,7 @@
   .hero_2 {
     font-size: 1.2em; /* Adjust font size for smaller screens */
     padding: 20px; /* Adjust padding for smaller screens */
-    width: 100px;
+  
   }
 
   .hero_3 {
