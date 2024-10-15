@@ -7,7 +7,6 @@ import Services from '../components/Services';
 import Pricing from '../components/Pricing';
 import Hero1 from '../components/Hero1';
 import Hero2 from '../components/Hero2';
-import contact from '../components/contact';
 import Contact from '../components/contact'; // Add this line
 
 export default function Home() {
@@ -36,9 +35,13 @@ export default function Home() {
     console.log("Form submitted:", formData);
   };
 
+  const handleLogoClick = () => {
+    setActiveComponent('services');
+  };
+
   return (
     <>
-      <Header onPricingClick={handlePricingClick} />
+      <Header onPricingClick={handlePricingClick} onLogoClick={handleLogoClick} />
       <main>
         {activeComponent === 'services' && (
           <>

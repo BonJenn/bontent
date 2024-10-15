@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from "../styles/header.module.css";
 
-export default function Header({ onPricingClick }) {
+export default function Header({ onPricingClick, onLogoClick }) {
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>
+      <div className={styles.logo} onClick={onLogoClick}>
         <h1>bontent</h1>
       </div>
 
