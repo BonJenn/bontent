@@ -7,13 +7,12 @@ import Footer from "../components/footer";
 import Services from "../components/services";
 import ClientCard from '../components/ClientCard';
 import Work from '../components/work';
+import Pricing from '../components/pricing'; // Assuming you have a Pricing component
 
 export default function Home() {
   const [showServices, setShowServices] = useState(false);
-  const [openIndex, setOpenIndex] = useState(null);
-  const contentRefs = useRef([]);
-
-  // Form state
+  const [showWork, setShowWork] = useState(false);
+  const [showPricing, setShowPricing] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -21,48 +20,42 @@ export default function Home() {
     message: ''
   });
 
-  const [showWork, setShowWork] = useState(false);
-
   const handleHomeClick = () => {
     setShowServices(false);
     setShowWork(false);
+    setShowPricing(false);
   };
 
   const handleServicesClick = () => {
     setShowServices(true);
-    setShowWork(false); // Ensure work is hidden when services is shown
+    setShowWork(false);
+    setShowPricing(false);
   };
 
   const handleWorkClick = () => {
     setShowWork(true);
     setShowServices(false);
+    setShowPricing(false);
   };
 
-  const handleClick = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
+  const handlePricingClick = () => {
+    setShowPricing(true);
+    setShowServices(false);
+    setShowWork(false);
   };
 
-  // Handle form input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
+    setFormData((prevData) => ({
+      ...prevData,
       [name]: value
     }));
   };
 
-  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would typically send the form data to your server
-    console.log('Form submitted:', formData);
-    // Reset form after submission
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      message: ''
-    });
+    // Handle form submission logic here
+    console.log("Form submitted:", formData);
   };
 
   return (
@@ -71,6 +64,7 @@ export default function Home() {
         onHomeClick={handleHomeClick} 
         onServicesClick={handleServicesClick}
         onWorkClick={handleWorkClick}
+        onPricingClick={handlePricingClick}
       />
       <main className={styles.main}>
         <div className={styles.hero_1}>
@@ -91,20 +85,29 @@ export default function Home() {
           </h3>
         </div>
 
-        <div id="work">
-          <Work />
-        </div>
+        {showWork && (
+          <div id="work">
+            <Work />
+          </div>
+        )}
 
+        {showServices && (
+          <div id="services" className={styles.servicesContainer}>
+            <Services />
+          </div>
+        )}
 
-        <div id="services" className={styles.servicesContainer}>
-          <Services />
-        </div>
+        {showPricing && (
+          <div id="pricing" className={styles.pricingContainer}>
+            <Pricing />
+          </div>
+        )}
 
         <div className={styles.hero_2}>
           <h1 className={styles.enhancedText}>
             <span style={{ fontWeight: '100' }}>Enhancing&nbsp;</span>
             <span className={styles.highlight}> brand presence </span>&nbsp;
-            <span style={{ fontWeight: '100' }}>through&nbsp;</span>
+            <span style={{ fontWeight: '100' }}> through&nbsp;</span>
             <span className={styles.highlight}> artistic design&nbsp;</span>
             <span style={{ fontWeight: '100' }}> and </span>&nbsp;
             <span className={styles.highlight}>digital products</span>.

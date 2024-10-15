@@ -1,8 +1,10 @@
-import styles from "../styles/services.module.css";
+import React from 'react';
 import Lottie from "lottie-react";
+import styles from "../styles/services.module.css";
 import designAnimation from '../../public/animations/design_animation.json'
 import webDesignAnimation from '../../public/animations/webdesign_animation.json';
 import softwareDevelopmentAnimation from '../../public/animations/software_development_animation.json'
+import leadsAnimation from '../../public/animations/leads_animation.json';
 
 export default function Services() {
     return (
@@ -58,6 +60,24 @@ export default function Services() {
                         style={{ width: 400, height: 400 }}
                         className={styles.imageRight}
                     />
+                </div>
+            </div>
+
+            <div className={styles.serviceItem}>
+                <h3 className={styles.serviceTitle}>Lead Generation</h3>
+                <div className={styles.serviceContent}>
+                    <div className={styles.textContent}>
+                         From mobile apps to complex enterprise systems, we leverage new technologies like generative AI to deliver robust, secure, and user-friendly software that drives innovation and growth for your business.
+                    </div>
+                    <div className={styles.lottieContainer}>
+                        <Lottie 
+                            animationData={leadsAnimation}
+                            loop={true}
+                            autoplay={true}
+                            rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}
+                            style={{ width: '100%', height: '100%' }}
+                        />
+                    </div>
                 </div>
             </div>
         </div>

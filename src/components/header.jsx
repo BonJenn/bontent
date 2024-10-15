@@ -1,30 +1,26 @@
-import { useState } from "react";
+import React from 'react';
 import styles from "../styles/header.module.css";
 
-export default function Header({ onHomeClick, onServicesClick, onWorkClick }) {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
-
+export default function Header({ onPricingClick }) {
   return (
     <header className={styles.header}>
-      <div className={styles.logo} onClick={onHomeClick}>
+      <div className={styles.logo}>
         <h1>bontent</h1>
       </div>
 
-      <div className={styles.hamburger} onClick={toggleMenu}>
+      <div className={styles.hamburger}>
         <span></span>
         <span></span>
         <span></span>
       </div>
 
-      <nav className={`${styles.navigation} ${menuOpen ? styles.open : ''}`}>
+      <nav className={styles.navigation}>
         <ul>
-          <li onClick={() => { onHomeClick(); toggleMenu(); }}>About</li>
-          <li onClick={() => { onWorkClick(); toggleMenu(); }}>Work</li>
-          <li onClick={() => { onServicesClick(); toggleMenu(); }}>Services</li>
+          <li><button onClick={onPricingClick}>Pricing</button></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          {/* Add other navigation items here */}
         </ul>
       </nav>
     </header>
