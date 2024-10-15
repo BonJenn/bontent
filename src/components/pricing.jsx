@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from "../styles/pricing.module.css";
+import styles from "../styles/pricing.module.css";  // Adjust path if needed
 
 export default function Pricing() {
   const [activeTab, setActiveTab] = useState('monthly');
@@ -8,7 +8,7 @@ export default function Pricing() {
   const pricingData = {
     monthly: [
       {
-        title: "Webflow development",
+        title: "Website Development",
         price: "$4900/month",
         billed: "$58,800 Billed yearly",
         features: [
@@ -22,7 +22,7 @@ export default function Pricing() {
         ]
       },
       {
-        title: "Design & development",
+        title: "Website Design & Development",
         price: "$5900/month",
         billed: "$70,800 Billed yearly",
         features: [
@@ -36,7 +36,7 @@ export default function Pricing() {
         ]
       },
       {
-        title: "Enterprise",
+        title: "Fullstack SaaS Development",
         price: "Let's chat",
         billed: "Custom plan",
         features: [
@@ -50,7 +50,7 @@ export default function Pricing() {
     ],
     quarterly: [
       {
-        title: "Webflow development",
+        title: "Website Development",
         price: "$4400/month",
         billed: "$52,800 Billed yearly",
         features: [
@@ -64,7 +64,7 @@ export default function Pricing() {
         ]
       },
       {
-        title: "Design & development",
+        title: "Website Design & Development",
         price: "$5400/month",
         billed: "$64,800 Billed yearly",
         features: [
@@ -78,7 +78,7 @@ export default function Pricing() {
         ]
       },
       {
-        title: "Enterprise",
+        title: "Fullstack SaaS Development",
         price: "Let's chat",
         billed: "Custom plan",
         features: [
@@ -92,7 +92,7 @@ export default function Pricing() {
     ],
     yearly: [
       {
-        title: "Webflow development",
+        title: "Website Development",
         price: "$3900/month",
         billed: "$46,800 Billed yearly",
         features: [
@@ -106,7 +106,7 @@ export default function Pricing() {
         ]
       },
       {
-        title: "Design & development",
+        title: "Website Design & Development",
         price: "$4700/month",
         billed: "$56,400 Billed yearly",
         features: [
@@ -120,7 +120,7 @@ export default function Pricing() {
         ]
       },
       {
-        title: "Enterprise",
+        title: "Fullstack SaaS Development",
         price: "Let's chat",
         billed: "Custom plan",
         features: [
@@ -153,7 +153,9 @@ export default function Pricing() {
           <div key={index} className={styles.pricingCard}>
             <h3>{plan.title}</h3>
             <p>{plan.price}</p>
-            <p>{plan.billed}</p>
+            {activeTab !== 'monthly' && (
+              <p className={styles.billed}>{plan.billed}</p>  // Applied CSS module class here
+            )}
             <ul>
               {plan.features.map((feature, i) => (
                 <li key={i}>{feature}</li>
