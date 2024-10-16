@@ -12,7 +12,6 @@
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   overflow: hidden;
 }
@@ -183,4 +182,26 @@
   border-radius: 5px;
   margin-top: 5px;
   display: inline-block;
+}
+
+.activeTab {
+  font-weight: bold; /* Make the text bold */
+  font-size: 1.2em; /* Increase the font size */
+  position: relative; /* Position relative for the pseudo-element */
+}
+
+.activeTab::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Position the underline just below the text */
+  width: 100%;
+  height: 3px; /* Thickness of the underline */
+  background-color: currentColor; /* Use the current text color */
+  transition: transform 0.3s ease; /* Smooth transition for sliding effect */
+  transform: scaleX(1); /* Start with full width */
+}
+
+.pricingToggle button:not(.activeTab)::after {
+  transform: scaleX(0); /* Hide underline for inactive tabs */
 }

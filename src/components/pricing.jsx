@@ -140,41 +140,24 @@ export default function Pricing() {
     '50h': { price: '$3750/50h' }
   };
 
-  const getSliderPosition = () => {
-    switch (activeTab) {
-      case 'monthly':
-        return 'translateX(0%)';
-      case 'quarterly':
-        return 'translateX(100%)';
-      case 'yearly':
-        return 'translateX(200%)';
-      default:
-        return 'translateX(0%)';
-    }
-  };
-
   return (
     <div className={styles.pricingContainer}>
       <div className={styles.pricingToggle}>
-        <div
-          className={styles.slider}
-          style={{ transform: getSliderPosition() }}
-        />
         <button
           onClick={() => setActiveTab('monthly')}
-          className={activeTab === 'monthly' ? 'active' : ''}
+          className={activeTab === 'monthly' ? styles.activeTab : ''}
         >
           Monthly
         </button>
         <button
           onClick={() => setActiveTab('quarterly')}
-          className={activeTab === 'quarterly' ? 'active' : ''}
+          className={activeTab === 'quarterly' ? styles.activeTab : ''}
         >
           Quarterly <span>10% OFF</span>
         </button>
         <button
           onClick={() => setActiveTab('yearly')}
-          className={activeTab === 'yearly' ? 'active' : ''}
+          className={activeTab === 'yearly' ? styles.activeTab : ''}
         >
           Yearly <span>20% OFF</span>
         </button>
@@ -186,7 +169,7 @@ export default function Pricing() {
             <h3>{plan.title}</h3>
             <p>{plan.price}</p>
             {activeTab !== 'monthly' && (
-              <p className={styles.billed}>{plan.billed}</p>  // Applied CSS module class here
+              <p className={styles.billed}>{plan.billed}</p>
             )}
             <ul>
               {plan.features.map((feature, i) => (
