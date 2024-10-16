@@ -68,8 +68,11 @@
   flex-direction: row;
 }
 
+.navigation, .navigation ul, .navigation li {
+    font-family: 'Manrope', sans-serif;
+}
+
 .navigation ul {
-  font-family: 'Manrope';
   font-weight: bolder;
   font-size: 20px;
   display: flex;
@@ -80,7 +83,6 @@
 }
 
 .navigation li {
-  font-family: 'Manrope';
   margin-right: 20px;
   cursor: pointer;
 }
