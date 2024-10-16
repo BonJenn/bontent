@@ -52,7 +52,7 @@ export default function Pricing() {
       {
         title: "Website Development",
         price: "$4400/month",
-        billed: "$52,800 Billed yearly",
+        billed: "$13,200 Billed Quarterly",
         features: [
           "Unlimited requests",
           "Unlimited revisions",
@@ -66,7 +66,7 @@ export default function Pricing() {
       {
         title: "Website Design & Development",
         price: "$5400/month",
-        billed: "$64,800 Billed yearly",
+        billed: "$15,900 Billed Quarterly",
         features: [
           "Unlimited requests",
           "Unlimited revisions",
@@ -140,12 +140,44 @@ export default function Pricing() {
     '50h': { price: '$3750/50h' }
   };
 
+  const getSliderPosition = () => {
+    switch (activeTab) {
+      case 'monthly':
+        return 'translateX(0%)';
+      case 'quarterly':
+        return 'translateX(100%)';
+      case 'yearly':
+        return 'translateX(200%)';
+      default:
+        return 'translateX(0%)';
+    }
+  };
+
   return (
     <div className={styles.pricingContainer}>
       <div className={styles.pricingToggle}>
-        <button onClick={() => setActiveTab('monthly')} id="monthly-btn">Monthly</button>
-        <button onClick={() => setActiveTab('quarterly')} id="quarterly-btn">Quarterly <span>10% OFF</span></button>
-        <button onClick={() => setActiveTab('yearly')} id="yearly-btn">Yearly <span>20% OFF</span></button>
+        <div
+          className={styles.slider}
+          style={{ transform: getSliderPosition() }}
+        />
+        <button
+          onClick={() => setActiveTab('monthly')}
+          className={activeTab === 'monthly' ? 'active' : ''}
+        >
+          Monthly
+        </button>
+        <button
+          onClick={() => setActiveTab('quarterly')}
+          className={activeTab === 'quarterly' ? 'active' : ''}
+        >
+          Quarterly <span>10% OFF</span>
+        </button>
+        <button
+          onClick={() => setActiveTab('yearly')}
+          className={activeTab === 'yearly' ? 'active' : ''}
+        >
+          Yearly <span>20% OFF</span>
+        </button>
       </div>
       
       <div className={styles.pricingCards}>
