@@ -16,12 +16,10 @@ export default function Header({ onPricingClick, onLogoClick }) {
 
       <nav className={styles.navigation}>
         <ul>
-         
           <li><a href="#services">Services</a></li>
           <li><a href="#about">About</a></li>
           <li><button onClick={onPricingClick}>Pricing</button></li>
           <li><a href="#contact">Contact</a></li>
-          {/* Add other navigation items here */}
         </ul>
       </nav>
     </header>
