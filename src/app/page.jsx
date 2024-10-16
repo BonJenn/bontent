@@ -1,13 +1,13 @@
 'use client'
 
 import React, { useState } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import Services from '../components/Services';
-import Pricing from '../components/Pricing';
-import Hero1 from '../components/Hero1';
-import Hero2 from '../components/Hero2';
-import Contact from '../components/contact'; // Add this line
+import Header from '../components/header';
+import Footer from '../components/footer';
+import Services from '../components/services';
+import Pricing from '../components/pricing';
+import Hero1 from '../components/hero1';
+import Hero2 from '../components/hero2';
+import Contact from '../components/contact';
 
 export default function Home() {
   const [activeComponent, setActiveComponent] = useState('services');
