@@ -123,7 +123,7 @@
   width: 100%; /* Set to full width */
   max-width: 1000px; /* Adjust to match the total width of pricing containers */
   margin: 0 auto; /* Center the container */
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .hourlyDetails {
