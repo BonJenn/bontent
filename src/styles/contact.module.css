@@ -1,45 +1,49 @@
 .hero_5 {
     padding: 50px 20px;
-    background-color: #fff;
+    background-color: #f0f0f0;
     text-align: center;
-  }
-  
-  .contactSection {
+    color: #333;
+}
+
+.contactSection {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .contactForm {
+}
+
+.contactForm {
     display: flex;
     flex-direction: column;
     gap: 15px;
-  }
-  
-  .formGroup {
+}
+
+.formGroup {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-  }
-  
-  .formGroup label {
+}
+
+.formGroup label {
     margin-bottom: 5px;
     font-weight: bold;
-  }
-  
-  .formGroup input,
-  .formGroup textarea {
+    color: #333;
+}
+
+.formGroup input,
+.formGroup textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-  }
-  
-  .submitButton {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.submitButton {
     padding: 10px 20px;
     background-color: #007bff;
     color: white;
@@ -47,8 +51,8 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
-  
-  .submitButton:hover {
+}
+
+.submitButton:hover {
     background-color: #0056b3;
-  }
+}
