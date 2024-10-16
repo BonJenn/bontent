@@ -176,6 +176,39 @@ export default function Pricing() {
                 <li key={i}>{feature}</li>
               ))}
             </ul>
+            <div className={styles.dedicatedTeam}>
+              <h4>Your Dedicated Team</h4>
+              <ul>
+                <li>
+                  <span className={styles.circle}></span>
+                  <div>
+                    Webflow developer
+                    <span>Works in React.js</span>
+                  </div>
+                </li>
+                <li>
+                  <span className={styles.circle}></span>
+                  <div>
+                    Project manager
+                    <span>Helps managing your project</span>
+                  </div>
+                </li>
+                <li>
+                  <span className={plan.title === "Website Development" ? styles.crossCircle : styles.circle}></span>
+                  <div>
+                    UI/UX designer
+                    <span>Works in Figma</span>
+                  </div>
+                </li>
+                <li>
+                  <span className={plan.title === "Website Development" || plan.title === "Website Design & Development" ? styles.crossCircle : styles.circle}></span>
+                  <div>
+                    Add more
+                    <span>Additional team members</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
             <button>Select</button>
           </div>
         ))}

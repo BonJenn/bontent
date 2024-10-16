@@ -125,6 +125,62 @@
   align-self: flex-end;
 }
 
+/* Dedicated Team */
+
+.dedicatedTeam {
+  margin-top: 20px;
+}
+
+.dedicatedTeam h4 {
+  margin-bottom: 10px;
+}
+
+.dedicatedTeam ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dedicatedTeam li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.circle, .crossCircle {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: #ccc; /* Random color placeholder */
+  border-radius: 50%;
+  margin-right: 10px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.crossCircle::before {
+  content: 'X';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: bold;
+}
+
+.dedicatedTeam div {
+  display: flex;
+  flex-direction: column;
+}
+
+.dedicatedTeam span {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.greyedOut {
+  color: #ccc;
+}
+
 /* Hourly Container */
 .hourlyContainer {
   background-color: #fff;
@@ -220,4 +276,9 @@
 
 .pricingToggle button:not(.activeTab)::after {
   transform: scaleX(0);
+}
+
+.strikethrough {
+  text-decoration: line-through;
+  color: #ccc;
 }
