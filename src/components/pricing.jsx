@@ -182,7 +182,7 @@ export default function Pricing() {
                 <li>
                   <span className={styles.circle}></span>
                   <div>
-                    Webflow developer
+                    Web developer
                     <span>Works in React.js</span>
                   </div>
                 </li>
@@ -218,7 +218,7 @@ export default function Pricing() {
         <div className={styles.hourlyDetails}>
           <div className={styles.hourlyIntro}>
             <h3>Hourly packages</h3>
-            <p>Best if you need occasional tweaks, changes or new features in your Webflow project.</p>
+            <p>Best if you need occasional tweaks, changes or new features in your web project.</p>
             <a href="#">Learn more</a>
           </div>
           <div className={styles.hourlyFeatures}>
