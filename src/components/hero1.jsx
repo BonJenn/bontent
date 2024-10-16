@@ -12,7 +12,8 @@ export default function Hero1() {
         <div className={styles.overlay}></div>
       </div>
       <h3 className={styles.heroText}>
-        Building digital solutions that drive business growth. Your success is our code.
+        Building digital solutions that drive business growth.<br />
+        Your success is our code.
       </h3>
     </div>
   );

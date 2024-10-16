@@ -84,6 +84,16 @@
   cursor: pointer;
 }
 
+.navigation button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0;
+}
+
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
@@ -113,4 +123,5 @@
     margin: 10px 0;
   }
 }
+
 
