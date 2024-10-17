@@ -193,20 +193,24 @@ export default function Pricing() {
                     <span>Helps managing your project</span>
                   </div>
                 </li>
-                <li>
-                  <span className={plan.title === "Website Development" ? styles.crossCircle : styles.circle}></span>
-                  <div>
-                    UI/UX designer
-                    <span>Works in Figma</span>
-                  </div>
-                </li>
-                <li>
-                  <span className={plan.title === "Website Development" || plan.title === "Website Design & Development" ? styles.crossCircle : styles.circle}></span>
-                  <div>
-                    Add more
-                    <span>Additional team members</span>
-                  </div>
-                </li>
+                {plan.title !== "Website Development" && (
+                  <li>
+                    <span className={styles.circle}></span>
+                    <div>
+                      UI/UX designer
+                      <span>Works in Figma</span>
+                    </div>
+                  </li>
+                )}
+                {plan.title === "Fullstack SaaS Development" && (
+                  <li>
+                    <span className={styles.circle}></span>
+                    <div>
+                      Add more
+                      <span>Additional team members</span>
+                    </div>
+                  </li>
+                )}
               </ul>
             </div>
             <button>Select</button>

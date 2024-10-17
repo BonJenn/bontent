@@ -43,10 +43,10 @@
 .pricingCards {
   display: flex;
   justify-content: space-between;
+  align-items: stretch; /* Ensure all cards are the same height */
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  align-items: stretch; /* Ensure all cards are the same height */
 }
 
 .pricingCard {
@@ -62,6 +62,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 0 5px;
   flex: 1;
+  height: 900px; /* Ensure full height */
 }
 
 /* Card Titles */
@@ -128,7 +129,14 @@
 /* Dedicated Team */
 
 .dedicatedTeam {
-  margin-top: 20px;
+  height: auto; /* Remove fixed height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items to the start */
+  flex-grow: 1; /* Allow it to grow to fill available space */
+  margin-top: auto; /* Default behavior */
+  padding-top: 20px; /* Add padding to position the text */
 }
 
 .dedicatedTeam h4 {
@@ -142,37 +150,12 @@
 
 .dedicatedTeam li {
   display: flex;
-  align-items: flex-start;
-  margin-bottom: 10px;
-}
-
-.circle, .crossCircle {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  background-color: #ccc; /* Random color placeholder */
-  border-radius: 50%;
-  margin-right: 10px;
-  flex-shrink: 0;
-  position: relative;
-}
-
-.crossCircle::before {
-  content: 'X';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  font-weight: bold;
-}
-
-.dedicatedTeam div {
-  display: flex;
-  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5px;
 }
 
 .dedicatedTeam span {
+  display: block;
   font-size: 0.9em;
   color: #666;
 }
@@ -281,4 +264,35 @@
 .strikethrough {
   text-decoration: line-through;
   color: #ccc;
+}
+.circle, .crossCircle {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: #ccc; /* Random color placeholder */
+  border-radius: 50%;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.crossCircle::before {
+  content: 'X';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: bold;
+}
+
+.greyedOut {
+  color: #ccc;
+}
+
+.pricingCard:nth-child(3) .dedicatedTeam {
+  margin-top: 50px; /* Adjust this value to align with the other cards */
+}
+
+.pricingCard:nth-child(1) .dedicatedTeam {
+  margin-top: 0; /* Reduce this value to raise the section */
 }
