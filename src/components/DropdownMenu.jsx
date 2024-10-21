@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import styles from "../styles/dropdownMenu.module.css";
 
 export default function DropdownMenu() {
@@ -6,11 +7,11 @@ export default function DropdownMenu() {
     <div className={styles.dropdown}>
       <ul>
         <li>
-          <a href="#webflow">Website Development</a>
+          <Link href="/web-development">Webflow Development</Link>
           <span className={styles.price}>From $4900/month</span>
         </li>
         <li>
-          <a href="#design">Web Design & Development</a>
+          <a href="#design">Design & Development</a>
           <span className={styles.price}>From $5900/month</span>
         </li>
         <li>
