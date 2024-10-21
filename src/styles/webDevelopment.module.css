@@ -1,0 +1,10 @@
+/* src/pages/webDevelopmentPage.css */
+.web-development-page {
+  padding: 20px;
+  background-color: #6287d4;
+}
+
+.web-development-page > div {
+  margin-bottom: 20px;
+}
+
