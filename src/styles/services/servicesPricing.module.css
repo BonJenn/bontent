@@ -1,18 +1,23 @@
 .services-pricing {
     display: flex;
-    justify-content: space-between;
-    padding: 20px;
+    justify-content: center; /* Centers the items */
+    padding: 50px;
     background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .pricing-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: #fff;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 45%;
+    width: 25%;
+    border: 3px solid #6287d4;
+    margin-right: 50px; /* Adjust as needed */
 }
 
 .pricing-card h1 {
@@ -22,7 +27,7 @@
 
 .pricing-card h2 {
     font-size: 32px;
-    color: #4a00e0;
+    color: #6287d4;
     margin-bottom: 20px;
 }
 
@@ -53,8 +58,9 @@
 }
 
 .description {
-    width: 50%;
-    padding: 20px;
+    width: 25%;
+    padding: 5px;
+    margin-left: 10px; /* Adjust as needed */
 }
 
 .description h2 {
@@ -66,4 +72,6 @@
     margin-bottom: 15px;
     color: #555;
 }
+
+
 
