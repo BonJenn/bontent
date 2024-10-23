@@ -1,5 +1,5 @@
 import React from 'react';
-
+import styles from '../../styles/services/servicesTestimonials.module.css';
 // ServicesTestimonials Component
 function ServicesTestimonials() {
     return (
