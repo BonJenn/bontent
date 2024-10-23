@@ -9,7 +9,7 @@ function ServicesTestimonials() {
                 <div className="testimonial">
                     <p><strong>Name:</strong> Todd Matthews</p>
                     <p><strong>Company:</strong> BitcoinBrainiac.org</p>
-                    <p><strong>Testimonial:</strong> Bontent's web development services have been a game-changer for us. Their team delivered a sleek, user-friendly website that has significantly improved our user engagement. Their attention to detail and commitment to excellence is unmatched.</p>
+                    <p><strong>Testimonial:</strong> Bontent&apos;s web development services have been a game-changer for us. Their team delivered a sleek, user-friendly website that has significantly improved our user engagement. Their attention to detail and commitment to excellence is unmatched.</p>
                 </div>
             </div>
 
@@ -27,7 +27,7 @@ function ServicesTestimonials() {
                 <div className="testimonial">
                     <p><strong>Name:</strong> Erica Slater</p>
                     <p><strong>Company:</strong> Vistaview Technical Solutions</p>
-                    <p><strong>Testimonial:</strong> Bontent transformed our online presence with their exceptional web development services. The new site is not only visually appealing but also highly functional. We couldn't be happier with the results.</p>
+                    <p><strong>Testimonial:</strong> Bontent transformed our online presence with their exceptional web development services. The new site is not only visually appealing but also highly functional. We couldn&apos;t be happier with the results.</p>
                 </div>
             </div>
 
