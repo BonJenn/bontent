@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Hero.module.css';
+import Image from 'next/image';
 
 export default function Hero({ title, subtitle, buttonText, imageUrl }) {
   return (
@@ -11,9 +12,8 @@ export default function Hero({ title, subtitle, buttonText, imageUrl }) {
         <button className={styles.button}>{buttonText}</button>
       </div>
       <div className={styles.imageContainer}>
-        <img src={imageUrl} alt="Hero" />
+        <Image src={imageUrl} alt="Hero" width={500} height={300} />
       </div>
     </div>
   );
 }
-

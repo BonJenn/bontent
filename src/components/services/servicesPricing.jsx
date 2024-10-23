@@ -25,7 +25,7 @@ const ServicesPricing = () => {
                 <p>Flowout is a team of certified Webflow experts who work as your in-house developers. Any design you have in mind, we got all the capabilities to convert it into a high-quality Webflow project.</p>
                 <p>Our team consists of skilled front-end developers assisting you with every custom request. With their advanced JavaScript knowledge, we are able to create a superior customer experience.</p>
                 <p>Trusted by the world&rsquo;s leading startups like Jasper, Awning, Sendlane, Kajabi, Sequoia Capital and others, we offer reliable and premium development services for each and every project.</p>
-                <p>By signing up for a Webflow development retainer package, you will unlock unlimited development requests and revisions. We'll make your site an engaging experience for your customers.</p>
+                <p>By signing up for a Webflow development retainer package, you will unlock unlimited development requests and revisions. We&apos;ll make your site an engaging experience for your customers.</p>
             </div>
         </div>
     );
