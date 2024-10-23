@@ -13,7 +13,7 @@ export default function WebDevelopmentPage() {
         title="Get unlimited Web development for all your creative ideas"
         subtitle="Your own team of certified Web developers without the in-house hiring. We bring your design from idea to a pixel-perfect website."
         buttonText="Get a demo"
-        imageUrl="/path/to/your/image.png"
+        imageUrl="/images/3d_website_graphic.png"
       />
       <ServicesPricing />
       <ServicesTestimonials />
