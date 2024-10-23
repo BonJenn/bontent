@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
 /* src/pages/webDevelopmentPage.css */
 .web-development-page {
   padding: 20px;
   background-color: #6287d4;
+  font-family: 'Manrope', sans-serif;
 }
 
 .web-development-page > div {
   margin-bottom: 20px;
 }
+
 

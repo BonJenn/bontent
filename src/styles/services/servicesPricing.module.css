@@ -5,6 +5,7 @@
     background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Manrope', sans-serif;
 }
 
 .pricing-card {
@@ -18,28 +19,33 @@
     width: 25%;
     border: 3px solid #6287d4;
     margin-right: 50px; /* Adjust as needed */
+    font-family: 'Manrope', sans-serif;
 }
 
 .pricing-card h1 {
     font-size: 24px;
     margin-bottom: 10px;
+    font-family: 'Manrope', sans-serif;
 }
 
 .pricing-card h2 {
     font-size: 32px;
     color: #6287d4;
     margin-bottom: 20px;
+    font-family: 'Manrope', sans-serif;
 }
 
 .pricing-card ul {
     list-style: none;
     padding: 0;
     margin-bottom: 20px;
+    font-family: 'Manrope', sans-serif;
 }
 
 .pricing-card li {
     margin-bottom: 10px;
     color: #333;
+    font-family: 'Manrope', sans-serif;
 }
 
 .select-button {
@@ -50,27 +56,35 @@
     border-radius: 4px;
     cursor: pointer;
     margin-bottom: 10px;
+    font-family: 'Manrope', sans-serif;
 }
 
 .demo-link {
     color: #7b61ff;
     text-decoration: none;
+    display: block; /* Make it a block element */
+    text-align: center; /* Center the text */
+    margin: 0 auto; /* Center the block element */
+    font-family: 'Manrope', sans-serif;
 }
 
 .description {
     width: 25%;
     padding: 5px;
     margin-left: 10px; /* Adjust as needed */
+    font-family: 'Manrope', sans-serif;
 }
 
 .description h2 {
     font-size: 24px;
     margin-bottom: 10px;
+    font-family: 'Manrope', sans-serif;
 }
 
 .description p {
     margin-bottom: 15px;
     color: #555;
+    font-family: 'Manrope', sans-serif;
 }
 
 
