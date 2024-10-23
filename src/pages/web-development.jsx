@@ -2,8 +2,8 @@ import React from 'react';
 import Hero from '../components/Hero';
 import ServicesPricing from '../components/services/servicesPricing';
 import ServicesTestimonials from '../components/services/servicesTestimonials';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '../components/header';
+import Footer from '../components/footer';
 
 export default function WebDevelopmentPage() {
   return (
