@@ -8,6 +8,7 @@ import Pricing from '../components/pricing';
 import Hero1 from '../components/hero1';
 import Hero2 from '../components/hero2';
 import Contact from '../components/contact';
+import Link from 'next/link';
 
 export default function Home() {
   const [activeComponent, setActiveComponent] = useState('services');
