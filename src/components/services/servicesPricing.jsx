@@ -6,8 +6,8 @@ const ServicesPricing = () => {
     return (
         <div className={styles['services-pricing']}>
             <div className={styles['pricing-card']}>
-                <h1>Unlimited Webflow development</h1>
-                <h2>$4900/month</h2>
+                <h1>Unlimited Web development & design</h1>
+                <h2>$5900/month</h2>
                 <ul>
                     <li>Unlimited requests</li>
                     <li>Unlimited revisions</li>
@@ -21,11 +21,11 @@ const ServicesPricing = () => {
                 <a href="#" className={styles['demo-link']}>Get a demo</a>
             </div>
             <div className={styles['description']}>
-                <h2>A top-performing website from your design</h2>
-                <p>Bontent is a team of certified web-development experts who work as your in-house developers. Any design you have in mind, we got all the capabilities to convert it into a high-quality, high-converting website.</p>
-                <p>Our team consists of skilled front-end developers assisting you with every custom request. With their advanced JavaScript knowledge, we are able to create a superior customer experience.</p>
-                <p>Trusted by the world&rsquo;s leading startups like Vistaview, Public Assemblage Group, and others, we offer reliable and premium development services for each and every project.</p>
-                <p>By signing up for a web development retainer package, you will unlock unlimited development requests and revisions. We&apos;ll make your site an engaging experience for your customers.</p>
+                <h2>A high-quality Webflow site that stands out</h2>
+                <p>Flowout is a team of skilled Webflow developers and designers who serve as your in-house team. Instead of paying and coordinating multiple people, we have them all in one place for you.</p>
+                <p>The team at your disposal consists of experienced front-end developers and web designers. With our advanced knowledge, there is no challenge in delivering any request you have.</p>
+                <p>World-leading startups like Jasper, Awning, Sendlane, Kajabi, Sequoia Capital and others trust us with all things Webflow, including superior development and design services.</p>
+                <p>By opting in for unlimited Webflow development and design package, you will get a web development and design subscription that's reliable and prioritizes each and every one of your needs.</p>
             </div>
         </div>
     );

@@ -11,7 +11,7 @@ export default function DropdownMenu() {
           <span className={styles.price}>From $4900/month</span>
         </li>
         <li>
-          <a href="#design">Design & Development</a>
+          <Link href="/design-development">Design & Development</Link>
           <span className={styles.price}>From $5900/month</span>
         </li>
         <li>
