@@ -31,6 +31,7 @@
   padding: 2px 5px;
   border-radius: 5px;
   margin-left: 5px;
+  font-size: 0.7em;
 }
 
 .pricingToggle button.active {
@@ -295,4 +296,120 @@
 
 .pricingCard:nth-child(1) .dedicatedTeam {
   margin-top: 0; /* Reduce this value to raise the section */
+}
+
+/* Add these media queries at the end of the file */
+
+@media (max-width: 768px) {
+  .pricingToggle {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .pricingToggle button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .pricingToggle span {
+    font-size: 0.4em;
+    padding: 6px 7px;
+    margin-left: 0; /* Remove the left margin since it's now stacked */
+  }
+
+  .pricingCards {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .pricingCard {
+    margin: 10px 0;
+    height: auto;
+    min-height: 600px;
+  }
+
+  .hourlyContainer {
+    padding: 15px;
+  }
+
+  .hourlyDetails {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hourlyIntro,
+  .hourlyFeatures,
+  .hourlyPrice {
+    margin-right: 0;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .hourlyToggle {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .hourlyContainer {
+    text-decoration: none;
+    padding: 15px;
+    flex-direction: column;
+  }
+
+  .hourlyDetails {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hourlyIntro {
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .hourlyIntro a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .hourlyFeatures {
+    text-align: center;
+    margin-right: 0;
+    text-decoration: none;
+  }
+
+  .hourlyPrice {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .pricingCard {
+    padding: 20px;
+    font-size: 0.9em;
+  }
+
+  .pricingCard h3 {
+    font-size: 1.2em;
+  }
+
+  .pricingCard p {
+    font-size: 1.5em;
+  }
+
+  .pricingCard button {
+    width: 100%;
+  }
+
+  .hourlyPrice h2 {
+    font-size: 1.5em;
+  }
+
+  .hourlyPrice button {
+    width: 100%;
+  }
 }
