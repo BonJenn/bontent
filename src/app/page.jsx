@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import Services from '../components/services';
@@ -19,9 +19,17 @@ export default function Home() {
     message: ''
   });
 
-  const handlePricingClick = () => {
-    setActiveComponent('pricing');
-  };
+  useEffect(() => {
+    // Make handlePricingClick available globally
+    window.handlePricingClick = () => {
+      setActiveComponent('pricing');
+    };
+
+    // Cleanup
+    return () => {
+      delete window.handlePricingClick;
+    };
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -38,6 +46,10 @@ export default function Home() {
 
   const handleLogoClick = () => {
     setActiveComponent('services');
+  };
+
+  const handlePricingClick = () => {
+    setActiveComponent('pricing');
   };
 
   return (

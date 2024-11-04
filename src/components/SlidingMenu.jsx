@@ -24,6 +24,14 @@ export default function SlidingMenu({ isOpen, onClose }) {
     setDropdownOpen(!dropdownOpen);
   };
 
+  const handlePricingClick = (e) => {
+    e.preventDefault();
+    onClose();
+    if (window.handlePricingClick) {
+      window.handlePricingClick();
+    }
+  };
+
   return (
     <div ref={menuRef} className={`${styles.slidingMenu} ${isOpen ? styles.open : ''}`}>
       <ul>
@@ -47,7 +55,7 @@ export default function SlidingMenu({ isOpen, onClose }) {
           )}
         </li>
         <li><a href="#about">About</a></li>
-        <li><Link href="/pricing">Pricing</Link></li>
+        <li><a href="#" onClick={handlePricingClick}>Pricing</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
