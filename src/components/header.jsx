@@ -16,6 +16,7 @@ export default function Header({ onPricingClick, onLogoClick }) {
   };
 
   const toggleMenu = () => {
+    console.log("Menu toggled:", !menuOpen);
     setMenuOpen(!menuOpen);
   };
 
@@ -25,10 +26,12 @@ export default function Header({ onPricingClick, onLogoClick }) {
         <h1>bontent</h1>
       </div>
 
-      <div className={styles.hamburger} onClick={toggleMenu}>
-        <span></span>
-        <span></span>
-        <span></span>
+      <div className={styles.hamburger}>
+        <button onClick={toggleMenu} className={styles.hamburgerButton}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
 
       <nav className={`${styles.navigation} ${menuOpen ? styles.open : ''}`}>

@@ -6,25 +6,18 @@ export default function SlidingMenu({ isOpen, onClose }) {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
-        onClose();
-      }
-    };
-
-    const handleClickInside = (event) => {
-      if (menuRef.current && menuRef.current.contains(event.target) && event.target.tagName !== 'A') {
+      if (isOpen && menuRef.current && !menuRef.current.contains(event.target)) {
+        console.log("Clicked outside, closing menu");
         onClose();
       }
     };
 
     document.addEventListener('mousedown', handleClickOutside);
-    document.addEventListener('mousedown', handleClickInside);
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
-      document.removeEventListener('mousedown', handleClickInside);
     };
-  }, [onClose]);
+  }, [isOpen, onClose]);
 
   return (
     <div ref={menuRef} className={`${styles.slidingMenu} ${isOpen ? styles.open : ''}`}>
