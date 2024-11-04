@@ -25,7 +25,7 @@ const ServicesPricing = () => {
                 <p>Flowout is a team of skilled Webflow developers and designers who serve as your in-house team. Instead of paying and coordinating multiple people, we have them all in one place for you.</p>
                 <p>The team at your disposal consists of experienced front-end developers and web designers. With our advanced knowledge, there is no challenge in delivering any request you have.</p>
                 <p>World-leading startups like Jasper, Awning, Sendlane, Kajabi, Sequoia Capital and others trust us with all things Webflow, including superior development and design services.</p>
-                <p>By opting in for unlimited Webflow development and design package, you will get a web development and design subscription that's reliable and prioritizes each and every one of your needs.</p>
+                <p>By opting in for unlimited Webflow development and design package, you will get a web development and design subscription that&apos;s reliable and prioritizes each and every one of your needs.</p>
             </div>
         </div>
     );
