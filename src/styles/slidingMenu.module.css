@@ -1,0 +1,41 @@
+.slidingMenu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 250px;
+  height: 100%;
+  background-color: #6287d4;
+  transition: right 0.3s ease;
+  z-index: 1000;
+  padding: 20px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.slidingMenu.open {
+  right: 0;
+}
+
+.slidingMenu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.slidingMenu li {
+  margin: 20px 0;
+}
+
+.slidingMenu a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
