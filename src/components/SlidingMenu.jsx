@@ -1,30 +1,53 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
 import styles from '../styles/slidingMenu.module.css';
 
 export default function SlidingMenu({ isOpen, onClose }) {
   const menuRef = useRef();
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (isOpen && menuRef.current && !menuRef.current.contains(event.target)) {
-        console.log("Clicked outside, closing menu");
         onClose();
       }
     };
 
     document.addEventListener('mousedown', handleClickOutside);
-
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [isOpen, onClose]);
 
+  const handleServicesClick = (e) => {
+    e.preventDefault();
+    setDropdownOpen(!dropdownOpen);
+  };
+
   return (
     <div ref={menuRef} className={`${styles.slidingMenu} ${isOpen ? styles.open : ''}`}>
       <ul>
-        <li><a href="#services">Services</a></li>
+        <li>
+          <a href="#" onClick={handleServicesClick}>Services</a>
+          {dropdownOpen && (
+            <ul className={styles.dropdown}>
+              <li>
+                <Link href="/web-development">Web Development</Link>
+                <span className={styles.price}>From $4900/month</span>
+              </li>
+              <li>
+                <Link href="/design-development">Design & Development</Link>
+                <span className={styles.price}>From $5900/month</span>
+              </li>
+              <li>
+                <a href="#hourly">Hourly Packages</a>
+                <span className={styles.price}>From $850</span>
+              </li>
+            </ul>
+          )}
+        </li>
         <li><a href="#about">About</a></li>
-        <li><a href="#pricing">Pricing</a></li>
+        <li><Link href="/pricing">Pricing</Link></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>

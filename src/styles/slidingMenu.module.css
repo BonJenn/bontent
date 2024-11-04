@@ -39,3 +39,24 @@
   cursor: pointer;
   margin-bottom: 20px;
 }
+
+.dropdown {
+  list-style: none;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.dropdown li {
+  margin: 15px 0;
+}
+
+.dropdown a {
+  font-size: 16px;
+}
+
+.price {
+  display: block;
+  font-size: 0.9em;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 4px;
+}

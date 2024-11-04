@@ -7,7 +7,7 @@ export default function DropdownMenu() {
     <div className={styles.dropdown}>
       <ul>
         <li>
-          <Link href="/web-development">Webflow Development</Link>
+          <Link href="/web-development">Web Development</Link>
           <span className={styles.price}>From $4900/month</span>
         </li>
         <li>
