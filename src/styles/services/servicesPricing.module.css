@@ -1,6 +1,6 @@
 .services-pricing {
     display: flex;
-    justify-content: center; /* Centers the items */
+    justify-content: center;
     padding: 50px;
     background-color: #f9f9f9;
     border-radius: 8px;
@@ -18,7 +18,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 25%;
     border: 3px solid #6287d4;
-    margin-right: 50px; /* Adjust as needed */
+    margin-right: 50px;
     font-family: 'Manrope', sans-serif;
 }
 
@@ -62,16 +62,16 @@
 .demo-link {
     color: #7b61ff;
     text-decoration: none;
-    display: block; /* Make it a block element */
-    text-align: center; /* Center the text */
-    margin: 0 auto; /* Center the block element */
+    display: block;
+    text-align: center;
+    margin: 0 auto;
     font-family: 'Manrope', sans-serif;
 }
 
 .description {
     width: 25%;
     padding: 5px;
-    margin-left: 10px; /* Adjust as needed */
+    margin-left: 10px;
     font-family: 'Manrope', sans-serif;
 }
 
@@ -85,6 +85,79 @@
     margin-bottom: 15px;
     color: #555;
     font-family: 'Manrope', sans-serif;
+}
+
+@media (max-width: 768px) {
+    .services-pricing {
+        flex-direction: column;
+        padding: 20px;
+        align-items: center;
+    }
+
+    .pricing-card {
+        width: 90%;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .description {
+        width: 90%;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .pricing-card h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .pricing-card h2 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .pricing-card ul {
+        text-align: left;
+    }
+
+    .select-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-pricing {
+        padding: 10px;
+    }
+
+    .pricing-card {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .description {
+        width: 100%;
+    }
+
+    .pricing-card h1 {
+        font-size: 18px;
+    }
+
+    .pricing-card h2 {
+        font-size: 24px;
+    }
+
+    .pricing-card li {
+        font-size: 14px;
+    }
+
+    .description h2 {
+        font-size: 20px;
+    }
+
+    .description p {
+        margin-bottom: 10px;
+    }
 }
 
 

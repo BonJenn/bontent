@@ -1,6 +1,6 @@
 import React from 'react';
-import Hero from '../components/Hero';
 import ServicesPricing from '../components/services/servicesPricing';
+import ServicesHero from '../components/services/servicesHero';
 import ServicesTestimonials from '../components/services/servicesTestimonials';
 import Header from '../components/header';
 import Footer from '../components/footer';
@@ -27,12 +27,7 @@ export default function DesignDevelopmentPage() {
   return (
     <div>
       <Header />
-      <Hero
-        title="Get unlimited Webflow development & design tailored to your needs"
-        subtitle="Your own team of skilled Webflow developers and designers on demand. We turn your idea into a world-class website."
-        buttonText="Get a demo"
-        imageUrl="/path/to/your/image.png"
-      />
+      <ServicesHero />
       <ServicesPricing />
       <ServicesTestimonials testimonials={designTestimonials} />
       <Footer />
