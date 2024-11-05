@@ -1,4 +1,5 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 import ServicesHero from '../components/services/servicesHero';
 import ServicesPricing from '../components/services/servicesPricing';
 import ServicesTestimonials from '../components/services/servicesTestimonials';
@@ -6,6 +7,9 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 
 export default function WebDevelopmentPage() {
+  const router = useRouter();
+  const handleLogoClick = () => router.push('/');
+
   const webDevTestimonials = [
     {
       name: "Todd Matthews",
@@ -26,7 +30,7 @@ export default function WebDevelopmentPage() {
 
   return (
     <div>
-      <Header />
+      <Header onLogoClick={handleLogoClick} />
       <ServicesHero />
       <ServicesPricing />
       <ServicesTestimonials testimonials={webDevTestimonials} />
