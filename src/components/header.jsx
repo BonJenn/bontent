@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import styles from "../styles/header.module.css";
 import DropdownMenu from './DropdownMenu';
 import SlidingMenu from './SlidingMenu';
+import Link from 'next/link';
 
-export default function Header({ onPricingClick, onLogoClick }) {
+export default function Header({ onPricingClick, onLogoClick, onServiceSelect }) {
   const [showDropdown, setShowDropdown] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -37,12 +38,12 @@ export default function Header({ onPricingClick, onLogoClick }) {
       <nav className={`${styles.navigation} ${menuOpen ? styles.open : ''}`}>
         <ul>
           <li onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-            <a href="#services">Services</a>
-            {showDropdown && <DropdownMenu />}
+            <Link href="#services">Services</Link>
+            {showDropdown && <DropdownMenu onServiceSelect={onServiceSelect} />}
           </li>
-          <li><a href="#about">About</a></li>
+          <li><Link href="#about">About</Link></li>
           <li><button onClick={onPricingClick}>Pricing</button></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><Link href="#contact">Contact</Link></li>
         </ul>
       </nav>
 

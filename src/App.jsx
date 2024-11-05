@@ -1,21 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './components/Header';
-import WebDevelopmentPage from './pages/web-development';
-import DesignDevelopmentPage from './pages/design-development';
-import Link from 'next/link';
 
-function App() {
-  return (
-    <Router>
-      <Header />
-      <Routes>
-        <Route path="/web-development" element={<WebDevelopmentPage />} />
-        <Route path="/design-development" element={<DesignDevelopmentPage />} />
-        {/* Add other routes here */}
-      </Routes>
-    </Router>
-  );
+function App({ children }) {
+  return <>{children}</>;
 }
 
 export default App;

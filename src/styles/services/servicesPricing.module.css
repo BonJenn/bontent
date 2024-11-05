@@ -23,8 +23,9 @@
 }
 
 .pricing-card h1 {
+    color: #333;
     font-size: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     font-family: 'Manrope', sans-serif;
 }
 
@@ -77,6 +78,7 @@
 
 .description h2 {
     font-size: 24px;
+    color: #6287d4;
     margin-bottom: 10px;
     font-family: 'Manrope', sans-serif;
 }

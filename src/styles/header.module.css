@@ -152,5 +152,27 @@
   outline: none;
 }
 
+.dropdownMenu {
+    /* ... existing styles ... */
+    color: #333; /* or any dark color that matches your design */
+}
+
+.dropdownItem {
+    /* ... existing styles ... */
+    color: #333;
+}
+
+/* If you have hover states, you might want to adjust those too */
+.dropdownItem:hover {
+    background-color: #f5f5f5;
+    color: #6287d4; /* or whatever accent color you're using */
+}
+
+.dropdown {
+    background-color: white;  /* or any light color */
+    color: #333;
+    /* ... other styles ... */
+}
+
 
 

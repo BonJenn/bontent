@@ -1,17 +1,16 @@
 import React from 'react';
-import Link from 'next/link';
 import styles from "../styles/dropdownMenu.module.css";
 
-export default function DropdownMenu() {
+export default function DropdownMenu({ onServiceSelect }) {
   return (
     <div className={styles.dropdown}>
       <ul>
-        <li>
-          <Link href="/web-development">Web Development</Link>
+        <li onClick={() => onServiceSelect('web-development')}>
+          <span>Web Development</span>
           <span className={styles.price}>From $4900/month</span>
         </li>
-        <li>
-          <Link href="/design-development">Design & Development</Link>
+        <li onClick={() => onServiceSelect('design-development')}>
+          <span>Design & Development</span>
           <span className={styles.price}>From $5900/month</span>
         </li>
         <li>

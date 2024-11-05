@@ -55,6 +55,12 @@
     margin-bottom: 10px;
 }
 
+.testimonial p {
+    color: #333;
+    margin: 8px 0;
+    font-family: 'Manrope', sans-serif;
+}
+
 /* Media query for tablets */
 @media (max-width: 768px) {
     .servicesTestimonials {
