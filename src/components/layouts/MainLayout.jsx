@@ -26,6 +26,7 @@ export default function MainLayout({ children }) {
   };
 
   const handlePricingClick = () => {
+    console.log('MainLayout: handlePricingClick called');
     setActiveComponent('pricing');
     if (pathname !== '/') {
       router.push('/');

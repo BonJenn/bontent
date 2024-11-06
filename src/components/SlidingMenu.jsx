@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import styles from '../styles/slidingMenu.module.css';
 
-export default function SlidingMenu({ isOpen, onClose, onServiceSelect }) {
+export default function SlidingMenu({ isOpen, onClose, onServiceSelect, onPricingClick }) {
   const menuRef = useRef();
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
@@ -59,7 +59,13 @@ export default function SlidingMenu({ isOpen, onClose, onServiceSelect }) {
           )}
         </li>
         <li><Link href="#about">About</Link></li>
-        <li><Link href="#pricing">Pricing</Link></li>
+        <li><a href="#" onClick={(e) => {
+          e.preventDefault();
+          console.log('SlidingMenu: Pricing clicked');
+          onClose();
+          console.log('onPricingClick exists:', !!onPricingClick);
+          if (onPricingClick) onPricingClick();
+        }}>Pricing</a></li>
         <li><Link href="#contact">Contact</Link></li>
       </ul>
     </div>

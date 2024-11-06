@@ -5,6 +5,7 @@ import SlidingMenu from './SlidingMenu';
 import Link from 'next/link';
 
 export default function Header({ onPricingClick, onLogoClick, onServiceSelect }) {
+  console.log('Header: onPricingClick exists:', !!onPricingClick);
   const [showDropdown, setShowDropdown] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -46,7 +47,7 @@ export default function Header({ onPricingClick, onLogoClick, onServiceSelect })
         </ul>
       </nav>
 
-      <SlidingMenu isOpen={menuOpen} onClose={toggleMenu} onServiceSelect={onServiceSelect} />
+      <SlidingMenu isOpen={menuOpen} onClose={toggleMenu} onServiceSelect={onServiceSelect} onPricingClick={onPricingClick} />
     </header>
   );
 }
