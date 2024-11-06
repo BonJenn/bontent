@@ -14,6 +14,31 @@ export default function MainLayout({ children }) {
   const router = useRouter();
   const pathname = usePathname();
   const [activeComponent, setActiveComponent] = useState('services');
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleMenuToggle = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const handleLogoClick = () => {
+    router.push('/');
+    setActiveComponent('services');
+  };
+
+  const handlePricingClick = () => {
+    setActiveComponent('pricing');
+    if (pathname !== '/') {
+      router.push('/');
+    }
+  };
+
+  const handleServiceSelect = (service) => {
+    setActiveComponent(service);
+    setMenuOpen(false); // Close menu after selection
+    if (pathname !== '/') {
+      router.push('/');
+    }
+  };
 
   const webDevTestimonials = [
     {
@@ -51,25 +76,6 @@ export default function MainLayout({ children }) {
     }
   ];
 
-  const handleLogoClick = () => {
-    router.push('/');
-    setActiveComponent('services');
-  };
-
-  const handlePricingClick = () => {
-    setActiveComponent('pricing');
-    if (pathname !== '/') {
-      router.push('/');
-    }
-  };
-
-  const handleServiceSelect = (service) => {
-    setActiveComponent(service);
-    if (pathname !== '/') {
-      router.push('/');
-    }
-  };
-
   const content = pathname === '/' ? (
     activeComponent === 'services' ? children :
     activeComponent === 'pricing' ? <Pricing /> :
@@ -98,6 +104,8 @@ export default function MainLayout({ children }) {
         onLogoClick={handleLogoClick} 
         onPricingClick={handlePricingClick}
         onServiceSelect={handleServiceSelect}
+        menuOpen={menuOpen}
+        onMenuToggle={handleMenuToggle}
       />
       <main>{content}</main>
       <Footer />

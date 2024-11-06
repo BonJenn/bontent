@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import styles from '../styles/slidingMenu.module.css';
 
-export default function SlidingMenu({ isOpen, onClose }) {
+export default function SlidingMenu({ isOpen, onClose, onServiceSelect }) {
   const menuRef = useRef();
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
@@ -24,11 +24,11 @@ export default function SlidingMenu({ isOpen, onClose }) {
     setDropdownOpen(!dropdownOpen);
   };
 
-  const handlePricingClick = (e) => {
+  const handleServiceClick = (service, e) => {
     e.preventDefault();
     onClose();
-    if (window.handlePricingClick) {
-      window.handlePricingClick();
+    if (onServiceSelect) {
+      onServiceSelect(service);
     }
   };
 
@@ -40,23 +40,27 @@ export default function SlidingMenu({ isOpen, onClose }) {
           {dropdownOpen && (
             <ul className={styles.dropdown}>
               <li>
-                <Link href="/web-development">Web Development</Link>
-                <span className={styles.price}>From $4900/month</span>
+                <a href="#" onClick={(e) => handleServiceClick('web-development', e)}>
+                  Web Development
+                  <span className={styles.price}>From $4900/month</span>
+                </a>
               </li>
               <li>
-                <Link href="/design-development">Design & Development</Link>
-                <span className={styles.price}>From $5900/month</span>
+                <a href="#" onClick={(e) => handleServiceClick('design-development', e)}>
+                  Design & Development
+                  <span className={styles.price}>From $5900/month</span>
+                </a>
               </li>
               <li>
-                <a href="#hourly">Hourly Packages</a>
+                <Link href="#hourly">Hourly Packages</Link>
                 <span className={styles.price}>From $850</span>
               </li>
             </ul>
           )}
         </li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#" onClick={handlePricingClick}>Pricing</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><Link href="#about">About</Link></li>
+        <li><Link href="#pricing">Pricing</Link></li>
+        <li><Link href="#contact">Contact</Link></li>
       </ul>
     </div>
   );

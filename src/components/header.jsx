@@ -8,17 +8,16 @@ export default function Header({ onPricingClick, onLogoClick, onServiceSelect })
   const [showDropdown, setShowDropdown] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   const handleMouseEnter = () => {
     setShowDropdown(true);
   };
 
   const handleMouseLeave = () => {
     setShowDropdown(false);
-  };
-
-  const toggleMenu = () => {
-    console.log("Menu toggled:", !menuOpen);
-    setMenuOpen(!menuOpen);
   };
 
   return (
@@ -35,7 +34,7 @@ export default function Header({ onPricingClick, onLogoClick, onServiceSelect })
         </button>
       </div>
 
-      <nav className={`${styles.navigation} ${menuOpen ? styles.open : ''}`}>
+      <nav className={styles.navigation}>
         <ul>
           <li onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <Link href="#services">Services</Link>
@@ -47,7 +46,7 @@ export default function Header({ onPricingClick, onLogoClick, onServiceSelect })
         </ul>
       </nav>
 
-      <SlidingMenu isOpen={menuOpen} onClose={toggleMenu} />
+      <SlidingMenu isOpen={menuOpen} onClose={toggleMenu} onServiceSelect={onServiceSelect} />
     </header>
   );
 }
