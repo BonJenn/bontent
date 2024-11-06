@@ -6,9 +6,9 @@ import Header from '../header';
 import Footer from '../footer';
 import Pricing from '../pricing';
 import ServiceContent from '../services/ServiceContent';
-import ServicesHero from '../services/ServicesHero';
+import ServicesHero from '../services/servicesHero';
 import ServicesPricing from '../services/servicesPricing';
-import ServicesTestimonials from '../services/ServicesTestimonials';
+import ServicesTestimonials from '../services/servicesTestimonials';
 
 export default function MainLayout({ children }) {
   const router = useRouter();
