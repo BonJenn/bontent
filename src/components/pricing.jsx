@@ -8,6 +8,19 @@ const handleCheckout = async (plan, billingInterval) => {
   try {
     const stripe = await stripePromise;
     
+    // Track the checkout initiation
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'begin_checkout', {
+        currency: 'USD',
+        value: parseFloat(plan.price.replace(/[^0-9.]/g, '')),
+        items: [{
+          name: plan.title,
+          price: parseFloat(plan.price.replace(/[^0-9.]/g, '')),
+          quantity: 1
+        }]
+      });
+    }
+
     // Skip checkout for "Let's chat" plans
     if (plan.price === "Let's chat") {
       console.log('Custom plan selected');
