@@ -12,7 +12,7 @@ export default function About() {
             <div className={styles.aboutContent}>
                 <section className={styles.missionSection}>
                     <h2>Our Mission</h2>
-                    <p>At Bontent, we are dedicated to transforming businesses through cutting-edge web and software development. Our team of experts combines creativity with technical excellence to deliver solutions that drive growth and innovation.</p>
+                    <p>At Bontent, we&apos;re dedicated to transforming businesses through cutting-edge web and software development. Our team of experts combines creativity with technical excellence to deliver solutions that drive growth and innovation.</p>
                 </section>
 
                 <section className={styles.valuesSection}>
@@ -63,7 +63,7 @@ export default function About() {
 
                 <section className={styles.approachSection}>
                     <h2>Our Approach</h2>
-                    <p>We believe in a collaborative approach that puts our clients' needs first. By combining technical expertise with creative thinking, we deliver solutions that not only meet but exceed expectations. Our React.js and Node.js expertise allows us to create fast, scalable, and maintainable applications that drive business success.</p>
+                    <p>We believe in a collaborative approach that puts our clients&apos; needs first. By combining technical expertise with creative thinking, we deliver solutions that not only meet but exceed expectations. Our React.js and Node.js expertise allows us to create fast, scalable, and maintainable applications that drive business success.</p>
                 </section>
             </div>
         </div>
