@@ -39,7 +39,7 @@ export default function About() {
 
                 <section className={styles.teamSection}>
                     <h2>Our Approach</h2>
-                    <p>We believe in a collaborative approach that puts our clients' needs first. By combining technical expertise with creative thinking, we deliver solutions that not only meet but exceed expectations.</p>
+                    <p>We believe in a collaborative approach that puts our clients&apos; needs first. By combining technical expertise with creative thinking, we deliver solutions that not only meet but exceed expectations.</p>
                 </section>
             </div>
         </div>
