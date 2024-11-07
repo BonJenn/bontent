@@ -7,7 +7,7 @@ const ServicesPricing = ({ service = 'design-development' }) => {
     const pricingDetails = {
         'web-development': {
             title: 'Website Development',
-            price: '$4900/month',
+            price: '$9800/month',
             features: [
                 'Unlimited requests',
                 'Unlimited revisions',
@@ -20,7 +20,7 @@ const ServicesPricing = ({ service = 'design-development' }) => {
         },
         'design-development': {
             title: 'Unlimited Web development & design',
-            price: '$5900/month',
+            price: '$11800/month',
             features: [
                 'Unlimited requests',
                 'Unlimited revisions',

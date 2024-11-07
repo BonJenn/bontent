@@ -74,8 +74,8 @@ export default function Pricing() {
     monthly: [
       {
         title: "Website Development",
-        price: "$4900/month",
-        billed: "$58,800 Billed yearly",
+        price: "$9,800/month",
+        billed: "$117,600 Billed yearly",
         features: [
           "Unlimited requests",
           "Unlimited revisions",
@@ -88,8 +88,8 @@ export default function Pricing() {
       },
       {
         title: "Website Design & Development",
-        price: "$5900/month",
-        billed: "$70,800 Billed yearly",
+        price: "$11,800/month",
+        billed: "$141,600 Billed yearly",
         features: [
           "Unlimited requests",
           "Unlimited revisions",
@@ -116,8 +116,8 @@ export default function Pricing() {
     quarterly: [
       {
         title: "Website Development",
-        price: "$4400/month",
-        billed: "$13,200 Billed Quarterly",
+        price: "$8,800/month",
+        billed: "$26,400 Billed Quarterly",
         features: [
           "Unlimited requests",
           "Unlimited revisions",
@@ -130,8 +130,8 @@ export default function Pricing() {
       },
       {
         title: "Website Design & Development",
-        price: "$5400/month",
-        billed: "$15,900 Billed Quarterly",
+        price: "$10,800/month",
+        billed: "$31,800 Billed Quarterly",
         features: [
           "Unlimited requests",
           "Unlimited revisions",
@@ -158,8 +158,8 @@ export default function Pricing() {
     yearly: [
       {
         title: "Website Development",
-        price: "$3900/month",
-        billed: "$46,800 Billed yearly",
+        price: "$7,800/month",
+        billed: "$93,600 Billed yearly",
         features: [
           "Unlimited requests",
           "Unlimited revisions",
@@ -172,8 +172,8 @@ export default function Pricing() {
       },
       {
         title: "Website Design & Development",
-        price: "$4700/month",
-        billed: "$56,400 Billed yearly",
+        price: "$9,400/month",
+        billed: "$112,800 Billed yearly",
         features: [
           "Unlimited requests",
           "Unlimited revisions",
@@ -200,9 +200,9 @@ export default function Pricing() {
   };
 
   const hourlyData = {
-    '10h': { price: '$850/10h' },
-    '25h': { price: '$2000/25h' },
-    '50h': { price: '$3750/50h' }
+    '10h': { price: '$1,700/10h' },
+    '25h': { price: '$4,000/25h' },
+    '50h': { price: '$7,500/50h' }
   };
 
   return (
