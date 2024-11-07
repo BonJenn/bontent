@@ -1,9 +1,74 @@
 import React, { useState } from 'react';
 import styles from "../styles/pricing.module.css";  // Adjust path if needed
+import { loadStripe } from '@stripe/stripe-js';
+
+const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
+
+const handleCheckout = async (plan, billingInterval) => {
+  try {
+    const stripe = await stripePromise;
+    
+    // Skip checkout for "Let's chat" plans
+    if (plan.price === "Let's chat") {
+      console.log('Custom plan selected');
+      return;
+    }
+
+    console.log('Plan:', plan); // Debug log
+    console.log('Billing Interval:', billingInterval); // Debug log
+
+    // Safely extract the monthly price
+    let monthlyPrice;
+    if (typeof plan.price === 'string') {
+      monthlyPrice = parseFloat(plan.price.replace(/[^0-9.]/g, ''));
+    } else {
+      console.error('Unexpected price format:', plan.price);
+      throw new Error('Invalid price format');
+    }
+
+    console.log('Monthly Price:', monthlyPrice); // Debug log
+
+    const response = await fetch('/api/create-checkout-session', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        plan: {
+          title: plan.title,
+          monthlyPrice: monthlyPrice
+        },
+        billingInterval
+      }),
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.error || 'Failed to create checkout session');
+    }
+
+    const { sessionId } = await response.json();
+
+    if (!sessionId) {
+      throw new Error('No session ID returned from the server');
+    }
+
+    const result = await stripe.redirectToCheckout({
+      sessionId: sessionId
+    });
+
+    if (result.error) {
+      throw new Error(result.error.message);
+    }
+  } catch (error) {
+    console.error('Error:', error);
+  }
+};
 
 export default function Pricing() {
   const [activeTab, setActiveTab] = useState('monthly');
   const [activeHourlyTab, setActiveHourlyTab] = useState('10h');
+  const [includePrioritySupport, setIncludePrioritySupport] = useState(false);
 
   const pricingData = {
     monthly: [
@@ -213,7 +278,9 @@ export default function Pricing() {
                 )}
               </ul>
             </div>
-            <button>Select</button>
+            <button onClick={() => handleCheckout(plan, activeTab)}>
+              Select
+            </button>
           </div>
         ))}
       </div>
