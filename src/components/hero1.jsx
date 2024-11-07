@@ -21,7 +21,8 @@ export default function Hero1() {
       </div>
       <h3 className={styles.heroText}>
         Building digital solutions that drive business growth.<br />
-        Your success is our code.
+        <br />
+        Your <span className={styles.highlightWord}>success</span> is our <span className={styles.highlightWord}>code</span>.
       </h3>
     </div>
   );

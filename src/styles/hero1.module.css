@@ -108,3 +108,9 @@
   .submitButton:hover {
     background-color: #0056b3;
   }
+  
+  .highlightWord {
+    color: #FFD700;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
