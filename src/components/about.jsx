@@ -12,7 +12,7 @@ export default function About() {
             <div className={styles.aboutContent}>
                 <section className={styles.missionSection}>
                     <h2>Our Mission</h2>
-                    <p>At Bontent, we're dedicated to transforming businesses through cutting-edge web and software development. Our team of experts combines creativity with technical excellence to deliver solutions that drive growth and innovation.</p>
+                    <p>At Bontent, we&apos;re dedicated to transforming businesses through cutting-edge web and software development. Our team of experts combines creativity with technical excellence to deliver solutions that drive growth and innovation.</p>
                 </section>
 
                 <section className={styles.valuesSection}>
