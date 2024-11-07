@@ -31,8 +31,8 @@ export default function Home() {
   return (
     <MainLayout>
       <Hero1 />
-      <Hero2 />
       <Services />
+      <Hero2 />
       <Contact formData={formData} handleChange={handleChange} handleSubmit={handleSubmit} />
     </MainLayout>
   );

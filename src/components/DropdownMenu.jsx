@@ -3,7 +3,7 @@ import styles from "../styles/dropdownMenu.module.css";
 
 export default function DropdownMenu({ onServiceSelect }) {
   return (
-    <div className={styles.dropdown}>
+    <div className={styles.dropdown} data-dropdown>
       <ul>
         <li onClick={() => onServiceSelect('web-development')}>
           <span>Web Development</span>

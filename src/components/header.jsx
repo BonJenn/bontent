@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from "../styles/header.module.css";
 import DropdownMenu from './DropdownMenu';
 import SlidingMenu from './SlidingMenu';
@@ -21,6 +21,21 @@ export default function Header({ onPricingClick, onLogoClick, onServiceSelect, o
     setShowDropdown(false);
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      const dropdown = document.querySelector('[data-dropdown]');
+      if (dropdown && !dropdown.contains(event.target) && 
+          !event.target.closest('li[data-services]')) {
+        setShowDropdown(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
   return (
     <header className={styles.header}>
       <div className={styles.logo} onClick={onLogoClick}>
@@ -37,7 +52,11 @@ export default function Header({ onPricingClick, onLogoClick, onServiceSelect, o
 
       <nav className={styles.navigation}>
         <ul>
-          <li onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+          <li 
+            data-services 
+            onMouseEnter={handleMouseEnter} 
+            onMouseLeave={handleMouseLeave}
+          >
             <Link href="#services">Services</Link>
             {showDropdown && <DropdownMenu onServiceSelect={onServiceSelect} />}
           </li>
