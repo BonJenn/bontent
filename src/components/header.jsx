@@ -4,7 +4,7 @@ import DropdownMenu from './DropdownMenu';
 import SlidingMenu from './SlidingMenu';
 import Link from 'next/link';
 
-export default function Header({ onPricingClick, onLogoClick, onServiceSelect }) {
+export default function Header({ onPricingClick, onLogoClick, onServiceSelect, onAboutClick }) {
   console.log('Header: onPricingClick exists:', !!onPricingClick);
   const [showDropdown, setShowDropdown] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -41,13 +41,22 @@ export default function Header({ onPricingClick, onLogoClick, onServiceSelect })
             <Link href="#services">Services</Link>
             {showDropdown && <DropdownMenu onServiceSelect={onServiceSelect} />}
           </li>
-          <li><Link href="#about">About</Link></li>
+          <li><a href="#" onClick={(e) => {
+            e.preventDefault();
+            onAboutClick();
+          }}>About</a></li>
           <li><button onClick={onPricingClick}>Pricing</button></li>
           <li><Link href="#contact">Contact</Link></li>
         </ul>
       </nav>
 
-      <SlidingMenu isOpen={menuOpen} onClose={toggleMenu} onServiceSelect={onServiceSelect} onPricingClick={onPricingClick} />
+      <SlidingMenu 
+        isOpen={menuOpen} 
+        onClose={toggleMenu} 
+        onServiceSelect={onServiceSelect} 
+        onPricingClick={onPricingClick}
+        onAboutClick={onAboutClick}
+      />
     </header>
   );
 }

@@ -9,6 +9,7 @@ import ServiceContent from '../services/ServiceContent';
 import ServicesHero from '../services/servicesHero';
 import ServicesPricing from '../services/servicesPricing';
 import ServicesTestimonials from '../services/servicesTestimonials';
+import About from '../about';
 
 export default function MainLayout({ children }) {
   const router = useRouter();
@@ -36,6 +37,13 @@ export default function MainLayout({ children }) {
   const handleServiceSelect = (service) => {
     setActiveComponent(service);
     setMenuOpen(false); // Close menu after selection
+    if (pathname !== '/') {
+      router.push('/');
+    }
+  };
+
+  const handleAboutClick = () => {
+    setActiveComponent('about');
     if (pathname !== '/') {
       router.push('/');
     }
@@ -80,6 +88,7 @@ export default function MainLayout({ children }) {
   const content = pathname === '/' ? (
     activeComponent === 'services' ? children :
     activeComponent === 'pricing' ? <Pricing /> :
+    activeComponent === 'about' ? <About /> :
     activeComponent === 'web-development' ? (
       <>
         <ServicesHero service="web-development" />
@@ -105,6 +114,7 @@ export default function MainLayout({ children }) {
         onLogoClick={handleLogoClick} 
         onPricingClick={handlePricingClick}
         onServiceSelect={handleServiceSelect}
+        onAboutClick={handleAboutClick}
         menuOpen={menuOpen}
         onMenuToggle={handleMenuToggle}
       />
