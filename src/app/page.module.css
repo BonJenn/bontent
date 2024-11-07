@@ -73,6 +73,7 @@
   height: 100%;
   overflow: hidden;
   z-index: -1;
+  background-color: #000; /* Add a background color while video loads */
 }
 
 .video {
@@ -80,6 +81,8 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
+  will-change: transform; /* Optimize performance */
+  transform: translateZ(0); /* Force hardware acceleration */
 }
 
 .overlay {
