@@ -7,7 +7,7 @@ export default function Footer() {
             <div className={styles.footerContainer}>
                 <div className={styles.footerSection}>
                     <h4>Bontent LLC.</h4>
-                    <p>Los Angeles, CA</p>
+                    <p>Made with love in Los Angeles, CA</p>
                     <p>contact@bontent.net</p>
                 </div>
             </div>
