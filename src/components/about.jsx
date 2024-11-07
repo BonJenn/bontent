@@ -12,7 +12,7 @@ export default function About() {
             <div className={styles.aboutContent}>
                 <section className={styles.missionSection}>
                     <h2>Our Mission</h2>
-                    <p>At Bontent, we&apos;re dedicated to transforming businesses through cutting-edge web and software development. Our team of experts combines creativity with technical excellence to deliver solutions that drive growth and innovation.</p>
+                    <p>At Bontent, we're dedicated to transforming businesses through cutting-edge web and software development. Our team of experts combines creativity with technical excellence to deliver solutions that drive growth and innovation.</p>
                 </section>
 
                 <section className={styles.valuesSection}>
@@ -37,9 +37,33 @@ export default function About() {
                     </div>
                 </section>
 
-                <section className={styles.teamSection}>
+                <section className={styles.techStackSection}>
+                    <h2>Our Tech Stack</h2>
+                    <div className={styles.techGrid}>
+                        <div className={styles.techCard}>
+                            <h3>Frontend Technologies</h3>
+                            <ul>
+                                <li>React.js</li>
+                                <li>Next.js</li>
+                                <li>TypeScript</li>
+                                <li>Modern CSS & SASS</li>
+                            </ul>
+                        </div>
+                        <div className={styles.techCard}>
+                            <h3>Backend Technologies</h3>
+                            <ul>
+                                <li>Node.js</li>
+                                <li>Express.js</li>
+                                <li>MongoDB</li>
+                                <li>RESTful APIs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section className={styles.approachSection}>
                     <h2>Our Approach</h2>
-                    <p>We believe in a collaborative approach that puts our clients&apos; needs first. By combining technical expertise with creative thinking, we deliver solutions that not only meet but exceed expectations.</p>
+                    <p>We believe in a collaborative approach that puts our clients' needs first. By combining technical expertise with creative thinking, we deliver solutions that not only meet but exceed expectations. Our React.js and Node.js expertise allows us to create fast, scalable, and maintainable applications that drive business success.</p>
                 </section>
             </div>
         </div>

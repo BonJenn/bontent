@@ -1,76 +1,197 @@
 .aboutContainer {
     font-family: 'Manrope', sans-serif;
     color: white;
-    padding: 40px 20px;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #6287d4 0%, #4a6cb3 100%);
 }
 
 .aboutHero {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
+    position: relative;
 }
 
 .aboutHero h1 {
-    font-size: 3.5em;
-    margin-bottom: 20px;
+    font-size: 4.5em;
+    margin-bottom: 25px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
 }
 
 .aboutHero p {
-    font-size: 1.5em;
+    font-size: 1.8em;
     opacity: 0.9;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
 }
 
 .aboutContent {
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
 }
 
 .missionSection, .valuesSection, .teamSection {
-    margin-bottom: 60px;
+    margin-bottom: 120px;
+    position: relative;
 }
 
 .missionSection h2, .valuesSection h2, .teamSection h2 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
+    font-size: 3em;
+    margin-bottom: 40px;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+}
+
+.missionSection h2::after, .valuesSection h2::after, .teamSection h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: white;
+    border-radius: 2px;
 }
 
 .valueGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
 }
 
 .valueCard {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 30px;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.valueCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .valueCard:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.valueCard:hover::before {
+    opacity: 1;
 }
 
 .valueCard h3 {
-    font-size: 1.5em;
-    margin-bottom: 15px;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    font-weight: 700;
+    position: relative;
 }
 
 .valueCard p {
     opacity: 0.9;
-    line-height: 1.6;
+    line-height: 1.8;
+    font-size: 1.1em;
+    position: relative;
+}
+
+.techStackSection {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    margin: 40px 0;
+}
+
+.techGrid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.techCard {
+    flex: 1;
+    max-width: 400px;
+}
+
+.techCard h3 {
+    color: #6287d4;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.techCard ul {
+    list-style: none;
+    padding: 0;
+}
+
+.techCard li {
+    color: #6287d4;
+    font-size: 1.2em;
+    margin: 15px 0;
+}
+
+.techStackSection h2 {
+    color: #6287d4;
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 40px;
+    font-weight: 700;
 }
 
 @media (max-width: 768px) {
+    .aboutContainer {
+        padding: 60px 20px;
+    }
+
     .aboutHero h1 {
-        font-size: 2.5em;
+        font-size: 3em;
     }
 
     .aboutHero p {
-        font-size: 1.2em;
+        font-size: 1.4em;
+    }
+
+    .missionSection h2, .valuesSection h2, .teamSection h2 {
+        font-size: 2.2em;
     }
 
     .valueGrid {
         grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .valueCard {
+        padding: 30px;
+    }
+
+    .techGrid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .techCard {
+        width: 100%;
     }
 }

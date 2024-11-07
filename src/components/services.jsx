@@ -63,7 +63,7 @@ export default function Services() {
                 </div>
             </div>
 
-            <div className={styles.serviceItem}>
+            {/* <div className={styles.serviceItem}>
                 <h3 className={styles.serviceTitle}>Lead Generation</h3>
                 <div className={styles.serviceContent}>
                     <div className={styles.textContent}>
@@ -79,7 +79,7 @@ export default function Services() {
                         />
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 }
