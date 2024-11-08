@@ -41,19 +41,16 @@ export default function SlidingMenu({ isOpen, onClose, onServiceSelect, onPricin
             <ul className={styles.dropdown}>
               <li>
                 <a href="#" onClick={(e) => handleServiceClick('web-development', e)}>
-                  Web Development
-                  <span className={styles.price}>From $4900/month</span>
+                  Web Development       
                 </a>
               </li>
               <li>
                 <a href="#" onClick={(e) => handleServiceClick('design-development', e)}>
-                  Design & Development
-                  <span className={styles.price}>From $5900/month</span>
+                  Design & Development  
                 </a>
               </li>
               <li>
                 <Link href="#hourly">Hourly Packages</Link>
-                <span className={styles.price}>From $850</span>
               </li>
             </ul>
           )}
