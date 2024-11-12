@@ -39,7 +39,7 @@ export default function Header({ onPricingClick, onLogoClick, onServiceSelect, o
   return (
     <header className={styles.header}>
       <div className={styles.logo} onClick={onLogoClick}>
-        <h1>bontent</h1>
+        <h1>Bontent</h1>
       </div>
 
       <div className={styles.hamburger}>
